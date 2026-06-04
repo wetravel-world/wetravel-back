@@ -2,12 +2,20 @@ from pathlib import Path
 from decouple import config, Csv
 import dj_database_url
 from datetime import timedelta
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-dev-key-change-in-production')
 DEBUG = config('DEBUG', default=True, cast=bool)
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=Csv())
+
+# Auto-allow Railway domains when deployed on Railway
+if os.environ.get('RAILWAY_ENVIRONMENT'):
+    ALLOWED_HOSTS += ['.railway.app', '.up.railway.app']
+    RAILWAY_PUBLIC_DOMAIN = os.environ.get('RAILWAY_PUBLIC_DOMAIN', '')
+    if RAILWAY_PUBLIC_DOMAIN:
+        ALLOWED_HOSTS.append(RAILWAY_PUBLIC_DOMAIN)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
