@@ -77,8 +77,9 @@ WSGI_APPLICATION = 'wetravel_back.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=config('DATABASE_URL'),
+        default=config('DATABASE_URL', default=''),
         conn_max_age=600,
+        conn_health_checks=True,
     )
 }
 
