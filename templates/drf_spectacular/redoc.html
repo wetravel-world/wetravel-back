@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <title>{{ title|default:"WeTravel API" }} — Docs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon/favicon.ico' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <style>
+      /* ── Design tokens ───────────────────────────────── */
+      :root {
+        --coral:      #e9663e;
+        --coral-dark: #c44e2c;
+        --coral-soft: #fbe7dd;
+        --deep-blue:  #133f81;
+        --ocean:      #013B95;
+        --bg:         #fbf6ee;
+        --ink:        #2a2018;
+        --sub:        #7c7166;
+        --line:       #ece2d4;
+        --panel-bg:   #1a2744;
+      }
+
+      html, body { margin: 0; padding: 0; background: var(--bg); }
+
+      /* ── Sidebar shell ───────────────────────────────── */
+      [data-role="sidebar"] {
+        background-color: var(--deep-blue) !important;
+        font-family: 'Hanken Grotesk', system-ui, sans-serif !important;
+      }
+
+      /* ── Injected logo block ─────────────────────────── */
+      .wt-logo-block {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 18px 20px 16px;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+        text-decoration: none;
+        flex-shrink: 0;
+      }
+      .wt-logo-block img {
+        width: 34px;
+        height: 34px;
+        object-fit: contain;
+        border-radius: 6px;
+        flex-shrink: 0;
+      }
+      .wt-logo-block .wt-wordmark {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 1;
+        color: #fff;
+        letter-spacing: -0.2px;
+        white-space: nowrap;
+      }
+      .wt-logo-block .wt-wordmark em {
+        font-style: normal;
+        color: var(--coral);
+      }
+      .wt-logo-block .wt-badge {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 9px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.45);
+        margin-top: 3px;
+      }
+
+      /* ── Sidebar navigation text ─────────────────────── */
+      [data-role="sidebar"] a,
+      [data-role="sidebar"] label,
+      [data-role="sidebar"] span,
+      [data-role="sidebar"] li,
+      [data-role="sidebar"] button {
+        color: rgba(255,255,255,0.82) !important;
+        font-family: 'Hanken Grotesk', system-ui, sans-serif !important;
+      }
+      [data-role="sidebar"] a:hover { color: #fff !important; }
+
+      /* Active item */
+      [data-role="sidebar"] li.active > a,
+      [data-role="sidebar"] li.active > label {
+        color: var(--coral) !important;
+        border-left: 3px solid var(--coral) !important;
+        background: rgba(233,102,62,0.14) !important;
+      }
+
+      /* Group headings (tag names) */
+      [data-role="sidebar"] h2,
+      [data-role="sidebar"] h3,
+      [data-role="sidebar"] [class*="MenuItemTitle"] {
+        color: rgba(255,255,255,0.45) !important;
+        font-family: 'Hanken Grotesk', system-ui, sans-serif !important;
+        font-size: 10.5px !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.1em !important;
+      }
+
+      /* Search box */
+      [data-role="sidebar"] input {
+        background: rgba(255,255,255,0.08) !important;
+        border: 1px solid rgba(255,255,255,0.16) !important;
+        color: #fff !important;
+        border-radius: 6px !important;
+        font-family: 'Hanken Grotesk', system-ui, sans-serif !important;
+      }
+      [data-role="sidebar"] input::placeholder { color: rgba(255,255,255,0.38) !important; }
+
+      /* ── Right panel — dark code pane ────────────────── */
+      /* Force all text in the dark panel to white */
+      [data-role="right-panel"],
+      [class*="right-panel"],
+      .redoc-wrap > div > div:last-child {
+        color: #fff !important;
+      }
+
+      /* "Request samples" / "Response samples" tab labels */
+      [role="tablist"] [role="tab"],
+      [role="tablist"] button,
+      [role="tablist"] li,
+      [role="tablist"] span {
+        color: #fff !important;
+        font-family: 'Hanken Grotesk', system-ui, sans-serif !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+      }
+
+      /* Active tab underline stays coral */
+      [role="tablist"] [aria-selected="true"],
+      [role="tablist"] [role="tab"][aria-selected="true"] span,
+      [role="tablist"] .react-tabs__tab--selected {
+        color: var(--coral) !important;
+        border-bottom-color: var(--coral) !important;
+      }
+
+      /* Server URL block inside dark panel */
+      [class*="ServerList"],
+      [class*="ServerItem"],
+      [class*="endpoint-url"] {
+        color: rgba(255,255,255,0.85) !important;
+      }
+
+      /* ── Main content ─────────────────────────────────── */
+      h1, h2, h3, h4, h5 {
+        font-family: 'Source Serif 4', Georgia, serif !important;
+        color: var(--ink) !important;
+      }
+      code, pre, [class*="mono"] {
+        font-family: 'IBM Plex Mono', monospace !important;
+        font-size: 13px !important;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar { width: 6px; height: 6px; }
+      ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--sub); }
+    </style>
+    {% endblock head %}
+  </head>
+  <body>
+    {% block body %}
+    {% load static %}
+    <div id="redoc-container"></div>
+
+    <script src="{{ redoc_standalone }}"></script>
+    <script>
+      Redoc.init(
+        "{{ schema_url }}",
+        {
+          {% if settings %}{{ settings|safe }},{% endif %}
+          theme: {
+            colors: {
+              primary: { main: '#e9663e', dark: '#c44e2c', light: '#fbe7dd', contrastText: '#fff' },
+              text:    { primary: '#2a2018', secondary: '#7c7166' },
+              border:  { dark: '#ece2d4', light: '#f5ede2' },
+              http: {
+                get:    '#133f81',
+                post:   '#e9663e',
+                put:    '#013B95',
+                patch:  '#1e6e8c',
+                delete: '#c0392b',
+              },
+            },
+            typography: {
+              fontSize:    '15px',
+              lineHeight:  '1.65',
+              fontFamily:  '"Hanken Grotesk", system-ui, sans-serif',
+              headings: {
+                fontFamily: '"Source Serif 4", Georgia, serif',
+                fontWeight: '700',
+              },
+              code: {
+                fontSize:        '13px',
+                fontFamily:      '"IBM Plex Mono", monospace',
+                color:           '#c44e2c',
+                backgroundColor: '#fbe7dd',
+              },
+              links: { color: '#e9663e', hoverColor: '#c44e2c' },
+            },
+            sidebar: {
+              width:           '280px',
+              backgroundColor: '#133f81',
+              textColor:       'rgba(255,255,255,0.85)',
+            },
+            rightPanel: {
+              backgroundColor: '#1a2744',
+              width:           '40%',
+              textColor:       '#ffffff',
+            },
+          },
+        },
+        document.getElementById('redoc-container')
+      );
+
+      // ── Inject logo into sidebar top via MutationObserver ──
+      // Redoc renders asynchronously with React; the sidebar may not
+      // exist when Redoc.init() returns, so we watch for it.
+      const LOGO_CLASS = 'wt-logo-block';
+
+      function injectLogo(sidebar) {
+        if (sidebar.querySelector('.' + LOGO_CLASS)) return;
+        const a = document.createElement('a');
+        a.className = LOGO_CLASS;
+        a.href = '/';
+        a.setAttribute('aria-label', 'WeTravel home');
+        a.innerHTML =
+          '<img src="{% static "img/logo.png" %}" alt="WeTravel logo">' +
+          '<div>' +
+            '<div class="wt-wordmark">We<em>Travel</em></div>' +
+            '<div class="wt-badge">API v1.0</div>' +
+          '</div>';
+        sidebar.insertBefore(a, sidebar.firstChild);
+      }
+
+      const observer = new MutationObserver(function() {
+        const sidebar = document.querySelector('[data-role="sidebar"]');
+        if (sidebar) {
+          injectLogo(sidebar);
+        }
+      });
+
+      observer.observe(document.getElementById('redoc-container'), {
+        childList: true,
+        subtree: true,
+      });
+    </script>
+    {% endblock body %}
+  </body>
+</html>
