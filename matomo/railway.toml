@@ -1,9 +1,0 @@
-[build]
-builder = "dockerfile"
-dockerfilePath = "Dockerfile"
-
-[deploy]
-healthcheckPath = "/matomo.php"
-healthcheckTimeout = 60
-restartPolicyType = "on_failure"
-restartPolicyMaxRetries = 3
