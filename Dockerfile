@@ -16,6 +16,4 @@ COPY . .
 
 RUN chmod +x start.sh
 
-EXPOSE ${PORT:-8000}
-
 CMD ["./start.sh"]
