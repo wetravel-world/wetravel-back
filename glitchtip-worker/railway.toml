@@ -1,0 +1,8 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "./bin/run-worker.sh"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
