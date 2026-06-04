@@ -3,8 +3,9 @@ builder = "dockerfile"
 dockerfilePath = "Dockerfile"
 
 [deploy]
+preDeployCommand = "python manage.py migrate --noinput"
 startCommand = "bash start.sh"
 healthcheckPath = "/api/cities/"
-healthcheckTimeout = 360
+healthcheckTimeout = 60
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 3
