@@ -17,6 +17,9 @@ if os.environ.get('RAILWAY_ENVIRONMENT'):
     if RAILWAY_PUBLIC_DOMAIN:
         ALLOWED_HOSTS.append(RAILWAY_PUBLIC_DOMAIN)
 
+# Production domains
+ALLOWED_HOSTS += ['we-travel.world', 'www.we-travel.world']
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -154,6 +157,12 @@ CORS_ALLOWED_ORIGINS = config(
     default='http://localhost:3000,http://localhost:5173',
     cast=Csv(),
 )
+CORS_ALLOWED_ORIGINS += [
+    'http://we-travel.world',
+    'https://we-travel.world',
+    'http://www.we-travel.world',
+    'https://www.we-travel.world',
+]
 CORS_ALLOW_CREDENTIALS = True
 
 # django-allauth
