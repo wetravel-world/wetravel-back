@@ -76,11 +76,14 @@ class GoogleAuthView(generics.GenericAPIView):
             return Response({'detail': 'Could not verify Google token.'}, status=status.HTTP_503_SERVICE_UNAVAILABLE)
 
         # Make sure the token was issued for our app
-        if info.get('aud') != settings.GOOGLE_CLIENT_ID:
+        # aud can be a string or a comma-separated list
+        aud = info.get('aud', '')
+        if settings.GOOGLE_CLIENT_ID not in aud:
             return Response({'detail': 'Token audience mismatch.'}, status=status.HTTP_400_BAD_REQUEST)
 
         email = info.get('email')
-        if not email or not info.get('email_verified'):
+        # email_verified is returned as the string "true" by tokeninfo
+        if not email or str(info.get('email_verified', '')).lower() != 'true':
             return Response({'detail': 'Google account email is not verified.'}, status=status.HTTP_400_BAD_REQUEST)
 
         avatar_url = info.get('picture', '')
@@ -121,6 +124,19 @@ def _unique_username(base: str) -> str:
         username = f'{base}{counter}'
         counter += 1
     return username
+
+
+class GoogleRedirectView(generics.GenericAPIView):
+    """
+    Fallback for browsers that block One Tap (Firefox ETP, Safari ITP).
+    Redirects to Google's OAuth consent screen via allauth.
+    """
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request, *args, **kwargs):
+        from django.shortcuts import redirect
+        from allauth.socialaccount.providers.google.views import oauth2_login
+        return oauth2_login(request)
 
 
 class CookieTokenRefreshView(TokenRefreshView):
