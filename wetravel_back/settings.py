@@ -201,7 +201,7 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='wetraveladmin@gmail.com')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='WeTravel <wetraveladmin@gmail.com>')
 
-FRONTEND_URL = config('FRONTEND_URL', default='https://we-travel.world')
+FRONTEND_URL = config('FRONTEND_URL', default='')
 
 # External APIs
 GOOGLE_CLIENT_ID = config('GOOGLE_CLIENT_ID', default='')
