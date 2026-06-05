@@ -20,6 +20,7 @@ class User(AbstractUser):
     email = models.EmailField(unique=True, verbose_name='email address')
     avatar_url = models.URLField(blank=True)
     is_google_auth = models.BooleanField(default=False)
+    email_verified = models.BooleanField(default=False)
 
     class Meta:
         db_table = 'accounts_user'
