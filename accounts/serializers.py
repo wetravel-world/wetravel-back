@@ -1,37 +1,14 @@
 import requests as http_requests
 from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.core.mail import send_mail
-from django.template.loader import render_to_string
 from rest_framework import serializers
 from rest_framework.exceptions import PermissionDenied
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 from .models import EmailVerificationToken
+from .utils import send_verification_email, unique_username
 
 User = get_user_model()
-
-
-# ---------------------------------------------------------------------------
-# Shared helper
-# ---------------------------------------------------------------------------
-
-def _send_verification_email(user):
-    token_obj = EmailVerificationToken.create_for_user(user)
-    verify_url = f"{settings.FRONTEND_URL}/auth/verify-email?token={token_obj.token}"
-    html = render_to_string('email/verify_email.html', {
-        'username': user.username,
-        'verify_url': verify_url,
-        'frontend_url': settings.FRONTEND_URL,
-    })
-    send_mail(
-        subject='Confirm your WeTravel email',
-        message=f"Hi {user.username},\n\nVerify your email: {verify_url}\n\nThis link expires in 24 hours.",
-        from_email=settings.DEFAULT_FROM_EMAIL,
-        recipient_list=[user.email],
-        html_message=html,
-        fail_silently=False,
-    )
 
 
 # ---------------------------------------------------------------------------
@@ -64,7 +41,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
-        _send_verification_email(user)
+        send_verification_email(user)
         return user
 
 
@@ -156,7 +133,7 @@ class ResendVerificationSerializer(serializers.Serializer):
 
     def save(self):
         if self._user:
-            _send_verification_email(self._user)
+            send_verification_email(self._user)
 
 
 # ---------------------------------------------------------------------------
@@ -203,7 +180,7 @@ class GoogleAuthSerializer(serializers.Serializer):
         user, created = User.objects.get_or_create(
             email=email,
             defaults={
-                'username': _unique_username(base_username),
+                'username': unique_username(base_username),
                 'is_google_auth': True,
                 'avatar_url': avatar_url,
                 'first_name': info.get('given_name', ''),
@@ -225,10 +202,3 @@ class GoogleAuthSerializer(serializers.Serializer):
         return user
 
 
-def _unique_username(base: str) -> str:
-    username = base
-    counter = 1
-    while User.objects.filter(username=username).exists():
-        username = f'{base}{counter}'
-        counter += 1
-    return username
