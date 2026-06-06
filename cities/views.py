@@ -1,11 +1,11 @@
 from django.conf import settings
-from django.db.models import Count, F, Q
+from django.db.models import Count, F, Q, Sum
 from rest_framework import generics, permissions, viewsets
 from rest_framework.exceptions import PermissionDenied
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from django.db.models import Avg
+
 from .models import City, Comment, CommentReply
 from .serializers import (
     CityDetailSerializer,
@@ -15,12 +15,21 @@ from .serializers import (
 )
 
 
+BASE_WEIGHT = 10  # base_score counts as this many user votes
+
 def _recalculate_city_score(city_pk):
+    try:
+        city = City.objects.get(pk=city_pk)
+    except City.DoesNotExist:
+        return
     approved = Comment.objects.filter(city_id=city_pk, is_approved=True)
-    result = approved.aggregate(avg=Avg('score'))
+    agg = approved.aggregate(total=Sum('score'), count=Count('id'))
+    user_sum = agg['total'] or 0
+    user_count = agg['count'] or 0
+    blended = (float(city.base_score) * BASE_WEIGHT + user_sum) / (BASE_WEIGHT + user_count)
     City.objects.filter(pk=city_pk).update(
-        welcome_score=result['avg'] or 0.0,
-        score_count=approved.count(),
+        welcome_score=round(blended, 1),
+        score_count=user_count,
     )
 
 

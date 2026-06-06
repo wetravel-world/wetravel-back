@@ -20,6 +20,8 @@ class City(models.Model):
     slug = models.SlugField(unique=True)
     description = models.TextField()
     welcome_score = models.DecimalField(max_digits=3, decimal_places=1, default=0.0)
+    base_score    = models.DecimalField(max_digits=3, decimal_places=1, default=0.0,
+                                        help_text='Editorial seed score (counts as 10 user votes)')
     score_count = models.PositiveIntegerField(default=0)
     latitude = models.DecimalField(max_digits=9, decimal_places=6, default=0)
     longitude = models.DecimalField(max_digits=9, decimal_places=6, default=0)
