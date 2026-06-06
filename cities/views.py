@@ -130,5 +130,8 @@ class BookingSearchView(APIView):
             f'&checkin={checkin}'
             f'&checkout={checkout}'
             f'&aid={affiliate_id}'
+            f'&utm_source=wetravel'
+            f'&utm_medium=city_page'
+            f'&utm_campaign={city_slug}'
         )
         return Response({'booking_url': url, 'city': city_name})
