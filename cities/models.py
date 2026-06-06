@@ -49,7 +49,7 @@ class Place(models.Model):
     description = models.TextField()
     place_type = models.CharField(max_length=50)
     image_url = models.URLField(blank=True, max_length=1000)
-    google_place_id = models.CharField(max_length=200, blank=True)
+    google_place_id = models.CharField(max_length=500, blank=True)
     address = models.CharField(max_length=300, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 

@@ -21,12 +21,23 @@ class CommentReplySerializer(serializers.ModelSerializer):
 class CommentSerializer(serializers.ModelSerializer):
     author_username = serializers.CharField(source='author.username', read_only=True)
     author_avatar_url = serializers.URLField(source='author.avatar_url', read_only=True)
+    author_stamps = serializers.SerializerMethodField()
     replies = CommentReplySerializer(many=True, read_only=True)
 
     class Meta:
         model = Comment
-        fields = ('id', 'author_username', 'author_avatar_url', 'body', 'score', 'created_at', 'replies')
-        read_only_fields = ('id', 'author_username', 'author_avatar_url', 'created_at', 'replies')
+        fields = ('id', 'author_username', 'author_avatar_url', 'author_stamps', 'body', 'score', 'created_at', 'replies')
+        read_only_fields = ('id', 'author_username', 'author_avatar_url', 'author_stamps', 'created_at', 'replies')
+
+    def get_author_stamps(self, obj):
+        cache = self.context.get('_stamps_cache')
+        if cache is not None:
+            return cache.get(obj.author_id, [])
+        return list(
+            Comment.objects.filter(author_id=obj.author_id, is_approved=True)
+            .values_list('city__slug', flat=True)
+            .distinct()
+        )
 
     def validate_score(self, value):
         if not 1 <= value <= 10:

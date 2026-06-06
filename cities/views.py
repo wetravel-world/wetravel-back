@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.db.models import Count, Q
+from django.db.models import Count, F, Q
 from rest_framework import generics, permissions, viewsets
 from rest_framework.exceptions import PermissionDenied
 from rest_framework.response import Response
@@ -64,6 +64,23 @@ class CommentViewSet(viewsets.ModelViewSet):
             .prefetch_related('replies', 'replies__author')
             .select_related('author')
         )
+
+    def get_serializer_context(self):
+        ctx = super().get_serializer_context()
+        if self.action == 'list':
+            qs = self.get_queryset()
+            author_ids = list(qs.values_list('author_id', flat=True).distinct())
+            rows = (
+                Comment.objects
+                .filter(author_id__in=author_ids, is_approved=True)
+                .values('author_id', slug=F('city__slug'))
+                .distinct()
+            )
+            cache: dict[int, list[str]] = {}
+            for row in rows:
+                cache.setdefault(row['author_id'], []).append(row['slug'])
+            ctx['_stamps_cache'] = cache
+        return ctx
 
     def perform_create(self, serializer):
         city = generics.get_object_or_404(City, slug=self.kwargs['slug'])

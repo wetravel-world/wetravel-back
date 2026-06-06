@@ -1,0 +1,532 @@
+[
+  {
+    "city_slug": "paris-france",
+    "places": [
+      { "name": "Eiffel Tower", "place_type": "landmark", "description": "Gustave Eiffel's 1889 iron lattice tower is Paris's defining icon, offering sweeping views of the city from its three observation levels." },
+      { "name": "Louvre Museum", "place_type": "museum", "description": "The world's most-visited museum, home to over 35,000 works including the Mona Lisa and Venus de Milo, set inside a former royal palace." },
+      { "name": "Musée d'Orsay", "place_type": "museum", "description": "Housed in a converted Beaux-Arts railway station, this museum holds the world's finest collection of Impressionist and Post-Impressionist art." },
+      { "name": "Notre-Dame Cathedral", "place_type": "religious site", "description": "A Gothic masterpiece on the Île de la Cité, currently undergoing restoration after the 2019 fire, with its iconic twin towers and rose windows." },
+      { "name": "Sacré-Cœur & Montmartre", "place_type": "neighborhood", "description": "The white-domed basilica crowns the hill of Montmartre, a historic artists' quarter with cobblestone streets, cabarets, and panoramic views over Paris." }
+    ]
+  },
+  {
+    "city_slug": "nice-france",
+    "places": [
+      { "name": "Promenade des Anglais", "place_type": "landmark", "description": "Nice's famous seafront boulevard stretches 7 km along the Baie des Anges, lined with palms, grand hotels, and the iconic blue chairs." },
+      { "name": "Vieux-Nice", "place_type": "neighborhood", "description": "The old town's labyrinth of Baroque ochre buildings, hidden chapels, and vibrant street life reflects Nice's centuries of Italian and French influence." },
+      { "name": "Colline du Château", "place_type": "viewpoint", "description": "A hilltop park accessible by lift or foot offering the best panoramic views over the old town, harbour, and the sweep of the Baie des Anges." },
+      { "name": "Musée Matisse", "place_type": "museum", "description": "Set in a 17th-century Genoese villa, this museum traces the full career of Henri Matisse, who spent much of his life in Nice." },
+      { "name": "Cours Saleya Market", "place_type": "market", "description": "The heart of Vieux-Nice's social life — a daily flower and produce market that transforms into a bustling antiques market on Mondays." }
+    ]
+  },
+  {
+    "city_slug": "lyon-france",
+    "places": [
+      { "name": "Vieux-Lyon", "place_type": "neighborhood", "description": "One of Europe's best-preserved Renaissance districts, with pastel-coloured townhouses and secret traboules — passageways threading through the blocks." },
+      { "name": "Basilique Notre-Dame de Fourvière", "place_type": "religious site", "description": "Lyon's hilltop basilica, built in 1872, dominates the skyline with its mosaic interiors and provides sweeping views across the city and the Alps." },
+      { "name": "Musée des Beaux-Arts de Lyon", "place_type": "museum", "description": "Housed in a former Benedictine convent, this is one of France's largest fine arts museums, with works from antiquity to the 20th century." },
+      { "name": "Les Halles Paul Bocuse", "place_type": "market", "description": "Lyon's legendary indoor food market, named after the city's most famous chef, is the best place to discover the region's celebrated charcuterie, cheeses, and quenelles." },
+      { "name": "Parc de la Tête d'Or", "place_type": "park", "description": "A vast 19th-century public park with a rose garden, botanical garden, zoo, and a lake for rowing — Lyon's green lung and favourite weekend escape." }
+    ]
+  },
+  {
+    "city_slug": "bordeaux-france",
+    "places": [
+      { "name": "Place de la Bourse & Miroir d'Eau", "place_type": "landmark", "description": "Bordeaux's most photogenic spot — the 18th-century neoclassical stock exchange faces the world's largest reflecting pool, creating stunning mirror effects at dusk." },
+      { "name": "Cité du Vin", "place_type": "museum", "description": "A striking wave-shaped building devoted entirely to wine culture, with immersive exhibitions covering the world's wine regions and a panoramic tasting bar on the top floor." },
+      { "name": "Saint-André Cathedral", "place_type": "religious site", "description": "A UNESCO-listed Gothic cathedral whose two soaring towers and ornate Royal Portal have anchored Bordeaux's skyline since the 11th century." },
+      { "name": "Rue Sainte-Catherine", "place_type": "landmark", "description": "One of Europe's longest pedestrian shopping streets, running 1.2 km through the heart of the city from the cathedral to the Place de la Victoire." },
+      { "name": "Darwin Ecosystem", "place_type": "cultural", "description": "A creative and social hub in converted military barracks on the right bank, home to a skate park, organic market, street art, co-working spaces, and eco-focused businesses." }
+    ]
+  },
+  {
+    "city_slug": "barcelona-spain",
+    "places": [
+      { "name": "Sagrada Família", "place_type": "religious site", "description": "Gaudí's unfinished basilica is Barcelona's defining landmark — an explosion of organic Gothic and Art Nouveau architecture under continuous construction since 1882." },
+      { "name": "Park Güell", "place_type": "park", "description": "A UNESCO-listed park designed by Gaudí featuring mosaic terraces, gingerbread gatehouses, and forest paths with views across the city to the sea." },
+      { "name": "La Boqueria Market", "place_type": "market", "description": "Barcelona's most famous covered market, off La Rambla, overflows with fresh fruit, seafood, cured meats, and artisan stalls — a sensory feast in the Gothic heart of the city." },
+      { "name": "Gothic Quarter", "place_type": "neighborhood", "description": "Barcelona's medieval core, built on the remains of the original Roman city, with narrow lanes, hidden plazas, and the Barcelona Cathedral at its heart." },
+      { "name": "Barceloneta Beach", "place_type": "beach", "description": "The city's most popular urban beach, just minutes from the Gothic Quarter, backed by chiringuitos (beach bars) and the Frank Gehry Fish sculpture." }
+    ]
+  },
+  {
+    "city_slug": "madrid-spain",
+    "places": [
+      { "name": "Prado Museum", "place_type": "museum", "description": "One of the world's greatest art museums, with an unrivalled collection of Spanish masters including Velázquez, Goya, and El Greco, plus major works by Rubens and Titian." },
+      { "name": "Retiro Park", "place_type": "park", "description": "Madrid's beloved central park — 350 acres of gardens, a boating lake, the Crystal Palace, and shaded walkways frequented by Madrileños of all ages." },
+      { "name": "Royal Palace of Madrid", "place_type": "landmark", "description": "The largest royal palace in Western Europe by floor area, with 3,418 rooms, lavish Baroque interiors, and the Royal Armoury housing one of Europe's finest collections of arms." },
+      { "name": "Reina Sofía Museum", "place_type": "museum", "description": "Spain's national museum of 20th-century art, home to Picasso's Guernica and major works by Dalí and Miró, housed in a converted 18th-century hospital." },
+      { "name": "Gran Vía & Puerta del Sol", "place_type": "landmark", "description": "Madrid's grand boulevard lined with Belle Époque and Art Deco theatres, cinemas, and shops leads to Puerta del Sol — the symbolic centre of Spain and the country's kilometre zero." }
+    ]
+  },
+  {
+    "city_slug": "seville-spain",
+    "places": [
+      { "name": "Real Alcázar", "place_type": "landmark", "description": "A UNESCO World Heritage royal palace complex of extraordinary beauty, with Moorish courtyards, ornate stucco, and lush gardens — still an official royal residence." },
+      { "name": "Seville Cathedral & La Giralda", "place_type": "religious site", "description": "The world's largest Gothic cathedral, built on the site of a former mosque, with Columbus's tomb inside and a climb up the Giralda minaret rewarding visitors with panoramic views." },
+      { "name": "Plaza de España", "place_type": "landmark", "description": "A sweeping semicircular Renaissance Revival plaza built for the 1929 Ibero-American Exposition, with ceramic-tiled alcoves representing each Spanish province and a canal for rowing." },
+      { "name": "Barrio Santa Cruz", "place_type": "neighborhood", "description": "Seville's former Jewish quarter, a maze of whitewashed alleys draped in bougainvillea, with hidden orange-tree plazas and tapas bars around every turn." },
+      { "name": "Triana Flamenco Show", "place_type": "cultural", "description": "The Triana neighbourhood across the Guadalquivir is flamenco's spiritual home — attending a tablao performance here connects visitors to the art form's deepest Andalusian roots." }
+    ]
+  },
+  {
+    "city_slug": "valencia-spain",
+    "places": [
+      { "name": "City of Arts and Sciences", "place_type": "landmark", "description": "Santiago Calatrava's futuristic complex of white bone-like structures houses an opera house, science museum, IMAX cinema, and Europe's largest aquarium." },
+      { "name": "Valencia Cathedral", "place_type": "religious site", "description": "A Gothic cathedral built over a former mosque, housing what many consider the Holy Grail — the Santo Cáliz — and offering city views from the octagonal Miguelete tower." },
+      { "name": "Mercado Central", "place_type": "market", "description": "One of Europe's largest and most beautiful covered markets, an Art Nouveau masterpiece trading fresh produce under stained-glass domes since 1928." },
+      { "name": "Turia Gardens", "place_type": "park", "description": "A 9 km green ribbon of parkland, sports facilities, and playgrounds running through the city along the old diverted riverbed of the Turia — one of Europe's great urban park transformations." },
+      { "name": "La Malvarrosa Beach", "place_type": "beach", "description": "Valencia's main urban beach stretches 2 km along the Mediterranean, backed by the seafood restaurants of the Cabanyal neighbourhood — birthplace of the original paella." }
+    ]
+  },
+  {
+    "city_slug": "new-york-united-states",
+    "places": [
+      { "name": "Central Park", "place_type": "park", "description": "An 843-acre greensward at the heart of Manhattan, with a lake, an outdoor theatre, the Metropolitan Museum on its eastern edge, and enough paths to get genuinely lost." },
+      { "name": "Metropolitan Museum of Art", "place_type": "museum", "description": "One of the world's largest and most comprehensive art museums, with over two million works spanning 5,000 years across 17 curatorial departments." },
+      { "name": "Statue of Liberty & Ellis Island", "place_type": "landmark", "description": "The 1886 copper statue on Liberty Island and the adjacent Ellis Island Immigration Museum together tell the story of American identity and the mass migration that shaped a nation." },
+      { "name": "Brooklyn Bridge & DUMBO", "place_type": "landmark", "description": "The iconic 1883 suspension bridge is best walked eastward for Manhattan skyline views; the DUMBO neighbourhood below offers galleries, cobblestone streets, and the waterfront." },
+      { "name": "Harlem", "place_type": "neighborhood", "description": "The historic capital of Black America — home to the Apollo Theater, the Studio Museum in Harlem, Marcus Garvey Park, and a soul food and jazz culture that is foundational to American identity." }
+    ]
+  },
+  {
+    "city_slug": "los-angeles-united-states",
+    "places": [
+      { "name": "Griffith Observatory", "place_type": "landmark", "description": "An Art Deco observatory on the southern slope of Mount Hollywood offering free public telescope viewing and the best panoramic views of the Los Angeles basin and the Hollywood Sign." },
+      { "name": "Getty Center", "place_type": "museum", "description": "Richard Meier's hilltop campus houses the Getty's exceptional collection of European paintings, sculptures, and decorative arts, with sweeping views across Los Angeles to the Pacific." },
+      { "name": "Santa Monica Pier & Venice Beach", "place_type": "beach", "description": "The 1909 Santa Monica Pier marks the end of Route 66; Venice Beach's boardwalk, skate park, and muscle beach just south remain the city's most theatrical stretch of coast." },
+      { "name": "Hollywood Walk of Fame", "place_type": "landmark", "description": "Over 2,700 stars embedded in the pavement of Hollywood Boulevard and Vine Street honour the entertainment industry's greats, alongside Grauman's Chinese Theatre and the TCL Chinese forecourt." },
+      { "name": "Leimert Park", "place_type": "neighborhood", "description": "Los Angeles's historic Black cultural hub, centred on 43rd Place and Crenshaw Boulevard, with jazz venues, African art galleries, and the Vision Theatre — a living archive of Black LA." }
+    ]
+  },
+  {
+    "city_slug": "new-orleans-united-states",
+    "places": [
+      { "name": "French Quarter", "place_type": "neighborhood", "description": "The oldest neighbourhood in New Orleans, with wrought-iron balconies, jazz clubs spilling onto Bourbon Street, and the lively Frenchmen Street just outside its boundary." },
+      { "name": "Garden District", "place_type": "neighborhood", "description": "A tree-lined neighbourhood of antebellum mansions built by the Anglo-American merchant class in the 19th century, best explored on foot along Prytania and Magazine Streets." },
+      { "name": "National WWII Museum", "place_type": "museum", "description": "America's official WWII museum, a sprawling campus with immersive exhibitions, a 4D film narrated by Tom Hanks, and a full-scale submarine — regularly ranked among the world's best museums." },
+      { "name": "Preservation Hall", "place_type": "cultural", "description": "A legendary French Quarter venue preserving the tradition of New Orleans jazz since 1961, with nightly performances in an intimate, deliberately unadorned 19th-century building." },
+      { "name": "Frenchmen Street", "place_type": "entertainment", "description": "Three blocks of live music bars in the Faubourg Marigny, where local musicians play jazz, blues, funk, and brass band music every night — the authentic alternative to tourist-oriented Bourbon Street." }
+    ]
+  },
+  {
+    "city_slug": "san-francisco-united-states",
+    "places": [
+      { "name": "Golden Gate Bridge", "place_type": "landmark", "description": "The 1937 International Orange suspension bridge spanning the Golden Gate strait is one of the most photographed structures in the world; best viewed from the Marin Headlands or Battery Spencer." },
+      { "name": "Alcatraz Island", "place_type": "landmark", "description": "The former maximum-security federal penitentiary on an island in San Francisco Bay, now a national park with audio tours narrated by former inmates and guards." },
+      { "name": "Fisherman's Wharf & Pier 39", "place_type": "landmark", "description": "The city's historic working waterfront, with Dungeness crab stands, sea lion colonies at Pier 39, and views of the bay and Alcatraz from the Embarcadero." },
+      { "name": "Golden Gate Park", "place_type": "park", "description": "A 1,000-acre park stretching from the Panhandle to the Pacific, housing the de Young Museum, California Academy of Sciences, Japanese Tea Garden, and Bison Paddock." },
+      { "name": "Fillmore District", "place_type": "neighborhood", "description": "Once called the Harlem of the West, the Fillmore was the centre of Black San Francisco's jazz, blues, and community life; its history is documented at the Fillmore Heritage Center and Jazz Preservation District." }
+    ]
+  },
+  {
+    "city_slug": "beijing-china",
+    "places": [
+      { "name": "Forbidden City", "place_type": "museum", "description": "A 72-hectare walled palace complex at the centre of Beijing, home to 24 emperors over 500 years, now the Palace Museum with nearly one million objects in its collection." },
+      { "name": "Great Wall of China — Mutianyu", "place_type": "landmark", "description": "The Mutianyu section, 70 km north of Beijing, is among the best-preserved stretches of the 2,300-year-old wall, accessible by cable car with toboggan descent available." },
+      { "name": "Temple of Heaven", "place_type": "religious site", "description": "A 15th-century imperial complex where emperors performed annual ceremonies to ensure good harvests; its triple-gabled Hall of Prayer for Good Harvests is one of China's most iconic structures." },
+      { "name": "Summer Palace", "place_type": "landmark", "description": "A UNESCO-listed imperial retreat of palaces, pavilions, and gardens around Kunming Lake, 15 km from the city centre — the finest surviving example of Chinese imperial garden design." },
+      { "name": "Tiananmen Square", "place_type": "landmark", "description": "The world's largest public square, framed by the National Museum, the Great Hall of the People, and the Gate of Heavenly Peace bearing Mao's portrait — the symbolic heart of the People's Republic." }
+    ]
+  },
+  {
+    "city_slug": "shanghai-china",
+    "places": [
+      { "name": "The Bund", "place_type": "landmark", "description": "A 1.5 km waterfront promenade lined with 52 colonial-era buildings in Art Deco, Beaux-Arts, and Gothic styles, facing a skyline of Pudong's futuristic towers across the Huangpu River." },
+      { "name": "Yu Garden", "place_type": "landmark", "description": "A classical Ming Dynasty garden in the Old City, with rockeries, pavilions, ponds, and the famous zigzag bridge leading to the Huxinting Teahouse — one of Shanghai's oldest." },
+      { "name": "French Concession", "place_type": "neighborhood", "description": "A tree-lined district of Art Deco villas, boutique cafés, and the former residences of Chinese Communists and French colonialists, now Shanghai's most fashionable neighbourhood." },
+      { "name": "Shanghai Tower Observation Deck", "place_type": "landmark", "description": "The world's second-tallest building offers a 360-degree view from 561 m on the 118th floor observation deck over the full spread of Pudong and beyond." },
+      { "name": "Xintiandi", "place_type": "neighborhood", "description": "A pedestrianised entertainment district of restored 1920s Shikumen stone-gate houses, housing the site museum of the First National Congress of the Chinese Communist Party." }
+    ]
+  },
+  {
+    "city_slug": "xian-china",
+    "places": [
+      { "name": "Terracotta Army Museum", "place_type": "museum", "description": "Three excavation pits containing over 8,000 life-size terracotta warriors and horses, buried to guard the tomb of China's first emperor Qin Shi Huang since 210 BCE." },
+      { "name": "Ancient City Wall", "place_type": "landmark", "description": "One of the best-preserved city walls in China, built in the 14th century Ming Dynasty, stretching 13.7 km — rented bikes allow visitors to circuit the top in about two hours." },
+      { "name": "Muslim Quarter & Great Mosque", "place_type": "neighborhood", "description": "A labyrinthine market street lined with street food stalls serving Hui Muslim cuisine — lamb skewers, roujiamo flatbreads, and biangbiang noodles — leading to a 1,000-year-old mosque." },
+      { "name": "Big Wild Goose Pagoda", "place_type": "religious site", "description": "A 64-metre Tang Dynasty Buddhist pagoda built in 652 CE to house sutras brought from India by the monk Xuanzang, set in a large plaza with musical fountain shows at night." },
+      { "name": "Shaanxi History Museum", "place_type": "museum", "description": "One of China's premier history museums, with over 370,000 artefacts tracing the full arc of Shaanxi's history — from prehistoric settlements through the Tang Dynasty capital of Chang'an." }
+    ]
+  },
+  {
+    "city_slug": "guangzhou-china",
+    "places": [
+      { "name": "Chen Clan Ancestral Hall", "place_type": "museum", "description": "A masterpiece of Cantonese architecture built in 1894, decorated with intricate friezes of ceramic, wood carving, and ironwork — now housing the Guangdong Folk Arts Museum." },
+      { "name": "Canton Tower", "place_type": "landmark", "description": "A 600-metre twisted lattice tower on the Pearl River bank, the world's fifth-tallest, with a bubble tram on its exterior antenna and observation decks at multiple levels." },
+      { "name": "Shamian Island", "place_type": "neighborhood", "description": "A 0.3 km² sandbank in the Pearl River that served as a foreign concession from 1859, with shaded boulevards of French and British colonial architecture now occupied by cafés and art galleries." },
+      { "name": "Guangzhou Opera House", "place_type": "landmark", "description": "Zaha Hadid's 2010 twin-boulder design on the Zhujiang New Town waterfront is among Asia's most striking contemporary buildings, hosting world-class opera, ballet, and orchestral performances." },
+      { "name": "Yuexiu Park & Nanyue King Museum", "place_type": "park", "description": "Guangzhou's largest park contains the Five Rams Sculpture — the city's symbol — and borders the Museum of the Nanyue King, with a 2,000-year-old royal tomb and extraordinary bronze and jade artefacts." }
+    ]
+  },
+  {
+    "city_slug": "rome-italy",
+    "places": [
+      { "name": "Colosseum & Roman Forum", "place_type": "ancient ruins", "description": "The 80,000-seat Flavian Amphitheatre, completed in 80 CE, is the largest ancient amphitheatre ever built; the adjacent Roman Forum was the political and commercial heart of the ancient world." },
+      { "name": "Vatican Museums & Sistine Chapel", "place_type": "museum", "description": "A vast complex of papal collections accumulated over five centuries, culminating in the Sistine Chapel with Michelangelo's incomparable ceiling fresco painted between 1508 and 1512." },
+      { "name": "Trevi Fountain", "place_type": "landmark", "description": "The largest Baroque fountain in Rome, completed in 1762, where three roads converge and tourists toss coins over their shoulder into the basin to ensure a return to the city." },
+      { "name": "Pantheon", "place_type": "landmark", "description": "The best-preserved ancient Roman building in the world, a 2nd-century temple with a perfectly proportioned dome whose central oculus — still the largest unreinforced concrete dome — floods the interior with light." },
+      { "name": "Borghese Gallery", "place_type": "museum", "description": "A Baroque villa housing one of Rome's finest private art collections, with Bernini's marble sculptures and Caravaggio's paintings in 20 rooms; timed tickets are essential." }
+    ]
+  },
+  {
+    "city_slug": "florence-italy",
+    "places": [
+      { "name": "Uffizi Gallery", "place_type": "museum", "description": "The world's greatest collection of Renaissance painting, housed in Vasari's 1560 Medici administrative building, with Botticelli's Birth of Venus and Primavera as its twin centrepieces." },
+      { "name": "Florence Cathedral & Brunelleschi's Dome", "place_type": "religious site", "description": "The green and white marble Duomo is crowned by Brunelleschi's 1436 terracotta dome — an engineering marvel that remained the world's largest for six centuries and can be climbed." },
+      { "name": "Ponte Vecchio", "place_type": "landmark", "description": "A medieval stone bridge spanning the Arno, lined with goldsmiths and jewellers since the 16th century, with the Vasari Corridor running above — the oldest and most photographed bridge in Europe." },
+      { "name": "Accademia Gallery", "place_type": "museum", "description": "Home to Michelangelo's David — a 5.17-metre marble statue completed in 1504, widely considered the greatest work of Renaissance sculpture — alongside his four unfinished Prisoners." },
+      { "name": "Piazzale Michelangelo", "place_type": "viewpoint", "description": "A panoramic terrace south of the Arno offering the definitive postcard view of Florence — the terracotta dome, Giotto's bell tower, and the Palazzo Vecchio tower all in a single frame." }
+    ]
+  },
+  {
+    "city_slug": "venice-italy",
+    "places": [
+      { "name": "St. Mark's Basilica & Piazza San Marco", "place_type": "religious site", "description": "A Byzantine cathedral encrusted with gold mosaics, housing the relics of St Mark, opens onto the Piazza Napoleon called 'the drawing room of Europe' — the social hub of the Republic for 1,000 years." },
+      { "name": "Doge's Palace", "place_type": "museum", "description": "The Gothic-Venetian seat of government for the Venetian Republic, with opulent state rooms, a vast council chamber, and the infamous Bridge of Sighs connecting it to the prisons." },
+      { "name": "Grand Canal", "place_type": "landmark", "description": "The 3.8 km S-shaped main waterway through Venice, lined with over 170 Gothic and Baroque palaces, best experienced by vaporetto (water bus) or a private gondola." },
+      { "name": "Rialto Bridge & Market", "place_type": "landmark", "description": "The oldest of four bridges across the Grand Canal, built in 1591 in white Istrian stone, flanked by shops and overlooking the Rialto Market where Venetians have bought fish and produce for 1,000 years." },
+      { "name": "Peggy Guggenheim Collection", "place_type": "museum", "description": "One of Europe's most important collections of 20th-century art, assembled by Peggy Guggenheim in her Palazzo Venier on the Grand Canal, with major works by Pollock, Picasso, Dalí, and Ernst." }
+    ]
+  },
+  {
+    "city_slug": "milan-italy",
+    "places": [
+      { "name": "Duomo di Milano", "place_type": "religious site", "description": "Italy's largest Gothic cathedral, with 135 marble spires and a rooftop terrace walkable from the inside — a five-century project that defines the entire city's visual identity." },
+      { "name": "The Last Supper", "place_type": "museum", "description": "Leonardo da Vinci's 1495–98 mural of Christ's final meal, painted directly on the refectory wall of Santa Maria delle Grazie — strictly ticketed, and one of the world's most sought-after art experiences." },
+      { "name": "Galleria Vittorio Emanuele II", "place_type": "landmark", "description": "A 19th-century iron-and-glass shopping arcade connecting Piazza del Duomo to La Scala, with floors of historic mosaics and Italy's oldest restaurants beneath its soaring barrel-vaulted roof." },
+      { "name": "Brera Art Gallery", "place_type": "museum", "description": "Housed in a Baroque former convent, the Pinacoteca di Brera is one of Italy's most important art galleries, with masterworks by Raphael, Caravaggio, Mantegna, and Piero della Francesca." },
+      { "name": "Sforza Castle", "place_type": "landmark", "description": "A 15th-century fortified castle at the heart of the city, housing eight civic museums including the Pietà Rondanini — Michelangelo's final, unfinished sculpture, worked on until days before his death." }
+    ]
+  },
+  {
+    "city_slug": "istanbul-turkey",
+    "places": [
+      { "name": "Hagia Sophia", "place_type": "religious site", "description": "Built as a Byzantine cathedral in 537 CE, converted to a mosque in 1453, a museum from 1934, and returned to a mosque in 2020 — the Hagia Sophia's 55-metre dome remains one of history's greatest architectural feats." },
+      { "name": "Blue Mosque", "place_type": "religious site", "description": "The Sultan Ahmed Mosque, completed in 1616, is named for the 20,000 blue Iznik tiles covering its interior; its six minarets made it the most minaretted mosque in Istanbul at the time of building." },
+      { "name": "Topkapi Palace", "place_type": "museum", "description": "The administrative and residential centre of the Ottoman Empire for 400 years, now a museum complex housing imperial treasures, the sacred relics of Islam, and the harem quarters." },
+      { "name": "Grand Bazaar", "place_type": "market", "description": "One of the world's oldest and largest covered markets, with 61 streets, over 4,000 shops, and an estimated 250,000 to 400,000 visitors daily since its construction in 1455." },
+      { "name": "Bosphorus Cruise", "place_type": "landmark", "description": "A ferry journey along the strait dividing Europe and Asia, passing Ottoman palaces, wooden yalı (waterfront mansions), fortresses, and the Fatih Sultan Mehmet Bridge — one of the world's great urban waterways." }
+    ]
+  },
+  {
+    "city_slug": "antalya-turkey",
+    "places": [
+      { "name": "Kaleiçi (Old Town)", "place_type": "neighborhood", "description": "Antalya's ancient walled harbour district, with Roman-era walls, a Seljuk minaret, Ottoman-era houses, the Hadrian's Gate triumphal arch, and a picturesque marina below the cliffs." },
+      { "name": "Düden Waterfalls", "place_type": "nature", "description": "Two waterfall sites near Antalya — the upper falls accessible by park, the lower falls dramatically plunging directly into the Mediterranean from a cliff face, viewable by boat." },
+      { "name": "Antalya Archaeological Museum", "place_type": "museum", "description": "One of Turkey's largest and most important museums, with artefacts from the Bronze Age through the Byzantine period from excavations at Perge, Aspendos, and dozens of surrounding sites." },
+      { "name": "Perge Ancient City", "place_type": "ancient ruins", "description": "A vast Hellenistic and Roman city 18 km east of Antalya, with a colonnaded main street, baths, agora, theatre, and an excellently preserved stadium that once held 12,000 spectators." },
+      { "name": "Konyaaltı Beach", "place_type": "beach", "description": "A 7 km pebble beach west of the city centre backed by the Taurus Mountains, with the Antalya Aquarium — the world's longest tunnel aquarium — at its western end." }
+    ]
+  },
+  {
+    "city_slug": "cappadocia-turkey",
+    "places": [
+      { "name": "Hot Air Balloon Ride over Göreme", "place_type": "cultural", "description": "Dawn balloon flights over the fairy chimneys, rose-tinted valleys, and cave churches of Cappadocia are among the world's most celebrated travel experiences, operating daily from October to May." },
+      { "name": "Göreme Open-Air Museum", "place_type": "museum", "description": "A UNESCO-listed complex of rock-cut Byzantine churches from the 10th–12th centuries, decorated with remarkably well-preserved frescoes — the Dark Church and Snake Church are highlights." },
+      { "name": "Uçhisar Castle", "place_type": "landmark", "description": "Cappadocia's highest natural rock formation, honeycombed with tunnels, rooms, and windows — a natural fortress offering the region's best panoramic views of the valleys and distant Mount Erciyes." },
+      { "name": "Derinkuyu Underground City", "place_type": "landmark", "description": "An ancient multi-level underground city carved from volcanic rock, extending 85 metres deep with ventilation shafts, wells, and space for up to 20,000 people to shelter during invasions." },
+      { "name": "Rose Valley & Love Valley Hike", "place_type": "nature", "description": "Marked trails through the Rose and Love Valleys pass columns of eroded tufa, cave churches, and vineyards — best walked at sunrise or sunset when the pink volcanic rock glows in the low light." }
+    ]
+  },
+  {
+    "city_slug": "izmir-turkey",
+    "places": [
+      { "name": "Kemeraltı Bazaar", "place_type": "market", "description": "A sprawling 17th-century covered market district in the heart of Izmir, with thousands of stalls selling spices, textiles, dried fruits, and handcrafts alongside Ottoman hans and historic mosques." },
+      { "name": "Kordon Promenade", "place_type": "landmark", "description": "Izmir's waterfront corniche stretching along the bay, lined with palm trees, seafood restaurants, and tea gardens — the city's daily social hub, especially at sunset over the Aegean." },
+      { "name": "Ephesus Ancient City", "place_type": "ancient ruins", "description": "One of the Mediterranean's greatest archaeological sites — 75 km from Izmir — with the Library of Celsus, the Great Theatre (capacity 25,000), and the Temple of Artemis on the UNESCO World Heritage list." },
+      { "name": "Agora of Smyrna", "place_type": "ancient ruins", "description": "The preserved remains of the 2nd-century Roman marketplace at the centre of ancient Smyrna, with a magnificent row of marble columns and a vaulted basement gallery still visible in central Izmir." },
+      { "name": "Asansör", "place_type": "landmark", "description": "A 1907 elevator tower connecting the lower Karataş neighbourhood with the hillside Jewish quarter, its rooftop terrace offering panoramic views over the bay — today home to a popular restaurant." }
+    ]
+  },
+  {
+    "city_slug": "mexico-city-mexico",
+    "places": [
+      { "name": "Zócalo & Metropolitan Cathedral", "place_type": "landmark", "description": "One of the world's largest public squares, anchored by the 16th-century Metropolitan Cathedral — the largest cathedral in the Americas — built over the ruins of the Aztec temple of Tenochtitlan." },
+      { "name": "National Museum of Anthropology", "place_type": "museum", "description": "Mexico's greatest museum and one of the finest in the world, with 23 rooms of pre-Columbian artefacts including the Aztec Sun Stone and the reconstructed Maya tomb of Pakal the Great." },
+      { "name": "Teotihuacán Pyramids", "place_type": "ancient ruins", "description": "A 50 km day trip to the Pyramid of the Sun — the third-largest pyramid in the world — and Pyramid of the Moon along the Avenue of the Dead, a pre-Aztec city at its height in 450 CE." },
+      { "name": "Frida Kahlo Museum (Casa Azul)", "place_type": "museum", "description": "The cobalt-blue house in Coyoacán where Frida Kahlo was born, lived with Diego Rivera, and died in 1954, preserving her studio, personal effects, pre-Columbian collection, and several paintings." },
+      { "name": "Xochimilco Floating Gardens", "place_type": "cultural", "description": "The last surviving remnant of the Aztec chinampa (floating garden) system, where trajinera flatboats carry visitors through canal networks past floating marigold gardens and weekend food vendors." }
+    ]
+  },
+  {
+    "city_slug": "cancun-mexico",
+    "places": [
+      { "name": "Chichén Itzá", "place_type": "ancient ruins", "description": "A UNESCO World Heritage Maya city and New Seven Wonders of the World site, 200 km from Cancún, with the 30-metre pyramid El Castillo whose shadow forms a serpent on the equinox." },
+      { "name": "Isla Mujeres", "place_type": "beach", "description": "A 7 km island reached by 20-minute ferry from Puerto Juárez, with the turquoise water and white sand of Playa Norte consistently ranking among Mexico's most beautiful beaches." },
+      { "name": "Ik Kil Cenote", "place_type": "nature", "description": "A dramatic open-air cenote near Chichén Itzá, 60 metres in diameter and 40 metres deep, with hanging vines, waterfalls, and crystal-clear turquoise water for swimming." },
+      { "name": "Xcaret Park", "place_type": "cultural", "description": "An eco-archaeological theme park on the Riviera Maya combining underground river swimming, a Maya village, traditional dance performances, and a nightly show of Mexican history and culture." },
+      { "name": "MUSA Underwater Museum", "place_type": "museum", "description": "The world's largest underwater art installation, with over 500 life-size sculptures submerged in the Cancún lagoon and off Isla Mujeres — accessible by snorkelling, glass-bottom boat, or diving." }
+    ]
+  },
+  {
+    "city_slug": "oaxaca-mexico",
+    "places": [
+      { "name": "Monte Albán", "place_type": "ancient ruins", "description": "A UNESCO World Heritage Zapotec city founded around 500 BCE on a flattened mountaintop above Oaxaca, with pyramids, tombs, a ball court, and sweeping views across three valleys." },
+      { "name": "Zócalo & Santo Domingo Church", "place_type": "landmark", "description": "Oaxaca's main plaza is bordered by the 16th-century Santo Domingo Church, whose gilded interior is among the finest examples of Mexican Baroque, adjacent to the Regional Museum of Oaxaca." },
+      { "name": "Mercado Benito Juárez", "place_type": "market", "description": "Oaxaca's central covered market, a labyrinth of stalls selling mole pastes, grasshopper snacks (chapulines), Oaxacan cheese, mezcal, and handwoven textiles from surrounding indigenous communities." },
+      { "name": "Hierve el Agua", "place_type": "nature", "description": "Mineral-rich springs that have petrified over millennia into cliff formations resembling frozen waterfalls, 70 km from the city, with infinity pools fed by the mineral springs." },
+      { "name": "Mezcal Distillery Tour", "place_type": "cultural", "description": "The Oaxaca Valley is the heart of mezcal production; visits to palenques (traditional distilleries) in villages like Santiago Matatlán let visitors see the agave roasting and distillation process firsthand." }
+    ]
+  },
+  {
+    "city_slug": "tulum-mexico",
+    "places": [
+      { "name": "Tulum Ruins", "place_type": "ancient ruins", "description": "A postclassic Maya walled city perched on 12-metre sea cliffs above the Caribbean, with the Temple of the Frescoes and the Castillo pyramid in one of the most scenic archaeological settings in the Americas." },
+      { "name": "Gran Cenote", "place_type": "nature", "description": "Tulum's most accessible cenote — a series of cavern pools with stalactites, fresh crystal-clear water, and plentiful fish, connected to an extensive underwater cave system popular with divers." },
+      { "name": "Dos Ojos Cenote", "place_type": "nature", "description": "Two adjacent cenotes connected by one of the world's longest underwater cave systems, with two named eyes (ojos) visible from above — an exceptional snorkelling and cavern diving destination." },
+      { "name": "Sian Ka'an Biosphere Reserve", "place_type": "nature", "description": "A UNESCO World Heritage reserve of 5,000 km² of tropical forest, mangroves, and lagoons south of Tulum, with boat tours through ancient Maya canals, manatees, crocodiles, and hundreds of bird species." },
+      { "name": "Tulum Beach", "place_type": "beach", "description": "A 15 km stretch of white-powder Caribbean coast backed by palm trees and bohemian eco-hotels, with the ruins visible on the cliff to the north — one of Mexico's most iconic beach settings." }
+    ]
+  },
+  {
+    "city_slug": "berlin-germany",
+    "places": [
+      { "name": "Brandenburg Gate", "place_type": "landmark", "description": "A 1791 neoclassical triumphal arch that was the symbol of divided Berlin during the Cold War, and became the defining image of German reunification on 9 November 1989." },
+      { "name": "Holocaust Memorial", "place_type": "landmark", "description": "Peter Eisenman's 2005 Field of Stelae — 2,711 concrete blocks of varying heights on a sloping field — accompanied by an underground information centre documenting the lives of murdered European Jews." },
+      { "name": "Museum Island", "place_type": "museum", "description": "A UNESCO World Heritage complex of five world-class museums on a Spree island, including the Pergamon Museum with its full-scale ancient gates and the Neues Museum housing the bust of Nefertiti." },
+      { "name": "East Side Gallery", "place_type": "landmark", "description": "The longest surviving stretch of the Berlin Wall — 1.3 km — transformed into an open-air gallery in 1990, with over 100 murals painted by international artists including the famous Fraternal Kiss." },
+      { "name": "Checkpoint Charlie & Topography of Terror", "place_type": "museum", "description": "The former Allied crossing point between East and West Berlin, and adjacent open-air museum on the excavated site of the SS and Gestapo headquarters, document the full history of Nazi terror and Cold War division." }
+    ]
+  },
+  {
+    "city_slug": "munich-germany",
+    "places": [
+      { "name": "Marienplatz & New Town Hall", "place_type": "landmark", "description": "Munich's central square is dominated by the Neo-Gothic New Town Hall, whose Glockenspiel tower puts on a 15-minute carillon performance twice daily with 43 bells and 32 life-size figures." },
+      { "name": "Englischer Garten", "place_type": "park", "description": "One of the world's largest urban parks — larger than Central Park — with beer gardens, a Japanese tea house, and the Eisbachwelle, where surfers ride a standing wave year-round in the city centre." },
+      { "name": "Deutsches Museum", "place_type": "museum", "description": "The world's largest science and technology museum, with original locomotives, aircraft, spacecraft, and interactive demonstrations across 73,000 m² on an island in the Isar River." },
+      { "name": "Nymphenburg Palace", "place_type": "landmark", "description": "An enormous 17th-century Baroque summer residence of Bavarian rulers, with lavishly decorated state rooms, King Ludwig I's Gallery of Beauties, and 200 hectares of park and canals." },
+      { "name": "Hofbräuhaus", "place_type": "cultural", "description": "A 500-year-old royal brewery in the city centre, Bavaria's most famous beer hall, serving litre steins of house-brewed Märzen beneath frescoed vaulted ceilings to 3,000 guests at a time." }
+    ]
+  },
+  {
+    "city_slug": "hamburg-germany",
+    "places": [
+      { "name": "Speicherstadt & Miniatur Wunderland", "place_type": "landmark", "description": "The world's largest warehouse district in red-brick Gothic style, now a UNESCO World Heritage site; its most-visited attraction is Miniatur Wunderland — the world's largest model railway exhibition." },
+      { "name": "Elbphilharmonie", "place_type": "landmark", "description": "Herzog & de Meuron's 2017 concert hall rises 110 metres above the Elbe on a former warehouse; its wave-shaped glass roof and Grand Hall with 10,000 individually angled acoustic panels make it one of the world's finest." },
+      { "name": "Hamburg Kunsthalle", "place_type": "museum", "description": "One of the largest and most important art museums in Germany, with a collection spanning seven centuries from medieval altarpieces to contemporary installations, in three connected buildings." },
+      { "name": "Fish Market (Fischmarkt)", "place_type": "market", "description": "Every Sunday from 5am, the historic Altona fish market on the Elbe combines fresh fish stalls with fruit sellers, live bands, and a party atmosphere that draws late-night revellers alongside early shoppers." },
+      { "name": "Reeperbahn & St. Pauli", "place_type": "entertainment", "description": "Hamburg's legendary entertainment district, where The Beatles cut their teeth in 1960–62, now a mile-long strip of music venues, clubs, and theatres anchored by the Beatlemania museum at Beatlesplatz." }
+    ]
+  },
+  {
+    "city_slug": "frankfurt-germany",
+    "places": [
+      { "name": "Römerberg", "place_type": "landmark", "description": "Frankfurt's reconstructed medieval old town square, with the half-timbered Ostzeile houses and the Gothic Römer city hall — the coronation venue for Holy Roman Emperors from 1562 to 1792." },
+      { "name": "Städel Museum", "place_type": "museum", "description": "One of Germany's most important art museums, with 700 years of European painting from Botticelli and Rembrandt to Monet, Picasso, and contemporary installations in a purpose-built underground extension." },
+      { "name": "Sachsenhausen", "place_type": "neighborhood", "description": "Frankfurt's south bank neighbourhood and the spiritual home of Ebbelwoi (apple wine), best enjoyed at traditional Straußwirtschaften (apple wine taverns) accompanied by Handkäse with music." },
+      { "name": "Frankfurt Cathedral (Kaiserdom)", "place_type": "religious site", "description": "The Imperial Cathedral of St Bartholomew, a Gothic church rebuilt after WWII bombing, where German kings were elected from 1356 and crowned from 1562 — the tower offers panoramic city views." },
+      { "name": "Palmengarten", "place_type": "park", "description": "A 22-hectare botanical garden established in 1871, with tropical glasshouses, a rose garden, and one of Germany's finest collections of orchids, bromeliads, and water plants." }
+    ]
+  },
+  {
+    "city_slug": "bangkok-thailand",
+    "places": [
+      { "name": "Grand Palace & Wat Phra Kaew", "place_type": "landmark", "description": "The walled royal complex built in 1782 encompasses the Grand Palace state rooms and the Temple of the Emerald Buddha — Thailand's most sacred site, housing a 14th-century jadeite Buddha image." },
+      { "name": "Wat Pho", "place_type": "religious site", "description": "Bangkok's oldest and largest temple complex, home to the giant Reclining Buddha — 46 metres long, covered in gold leaf — and the original campus of the Traditional Thai Massage School." },
+      { "name": "Wat Arun (Temple of Dawn)", "place_type": "religious site", "description": "An 18th-century riverside temple on the Thonburi bank of the Chao Phraya, its 79-metre Khmer-style prang encrusted with fragments of Chinese porcelain — especially spectacular at sunrise and illuminated at night." },
+      { "name": "Chatuchak Weekend Market", "place_type": "market", "description": "The world's largest weekend market, with over 15,000 stalls across 35 acres selling everything from antiques and street food to live animals and vintage clothing — a full day's exploration." },
+      { "name": "Chao Phraya River Cruise", "place_type": "landmark", "description": "A ferry journey on the Chao Phraya passes the Grand Palace, Wat Arun, the Asiatique night market, and dozens of golden spires — the essential way to grasp Bangkok's riverside geography and history." }
+    ]
+  },
+  {
+    "city_slug": "chiang-mai-thailand",
+    "places": [
+      { "name": "Doi Suthep Temple (Wat Phra That Doi Suthep)", "place_type": "religious site", "description": "A revered 14th-century hilltop temple 15 km from the city, reached via 309 steps flanked by Naga serpent balustrades, with a gilded chedi and panoramic views across the Chiang Mai basin." },
+      { "name": "Old City & Sunday Walking Street", "place_type": "neighborhood", "description": "The square moat-enclosed old city contains over 300 temples including Wat Chiang Man and Wat Phra Singh; every Sunday evening Wualai Road becomes a pedestrian street market." },
+      { "name": "Ethical Elephant Sanctuary", "place_type": "nature", "description": "Chiang Mai is surrounded by ethical elephant sanctuaries offering full-day visits to observe, feed, and bathe elephants in a non-riding, rescue-focused environment — a transformative experience." },
+      { "name": "Wat Chedi Luang", "place_type": "religious site", "description": "A 15th-century temple whose massive chedi (stupa) reached 90 metres before a 1545 earthquake partially collapsed it; monks still in residence offer monk chats to visiting travellers each evening." },
+      { "name": "Night Bazaar", "place_type": "market", "description": "A nightly market on Chang Khlan Road selling hill tribe crafts, silverware, silk, and carved wood, surrounded by competing night food courts and street performers — Chiang Mai's most-visited evening destination." }
+    ]
+  },
+  {
+    "city_slug": "phuket-thailand",
+    "places": [
+      { "name": "Phang Nga Bay", "place_type": "nature", "description": "A UNESCO-protected bay of emerald water and towering limestone karsts, including James Bond Island (Ko Tapu) from The Man with the Golden Gun — best explored by longtail boat or sea kayak." },
+      { "name": "Old Phuket Town", "place_type": "neighborhood", "description": "A UNESCO-recognised townscape of Sino-Portuguese shophouses in faded pastels, dating from the tin-mining boom of the 19th century, now with independent cafés, murals, and a Sunday Walking Street market." },
+      { "name": "Big Buddha", "place_type": "landmark", "description": "A 45-metre white Carrara marble Buddha image on the Nakkerd hilltop overlooking both coasts of Phuket, surrounded by smaller statues and offering panoramic views of the island." },
+      { "name": "Phi Phi Islands", "place_type": "beach", "description": "A day trip by speedboat to Ko Phi Phi Leh and Ko Phi Phi Don, with Maya Bay (The Beach film location), Viking Cave, and some of Thailand's most dramatic cliff-and-turquoise-water scenery." },
+      { "name": "Patong Beach", "place_type": "beach", "description": "Phuket's most famous and energetic beach — a 3 km arc of sand backed by hotels, beach clubs, and the Bangla Road entertainment strip; the benchmark against which all other Phuket beaches are judged." }
+    ]
+  },
+  {
+    "city_slug": "krabi-thailand",
+    "places": [
+      { "name": "Railay Beach", "place_type": "beach", "description": "A peninsula accessible only by longtail boat, enclosed by sheer limestone cliffs, with four distinct beaches — Railay West's sunsets and Phra Nang's cave shrine are among Thailand's most beautiful." },
+      { "name": "Tiger Cave Temple (Wat Tham Sua)", "place_type": "religious site", "description": "A forest monastery 3 km from Krabi Town; 1,237 steps climb to the summit where a golden Buddha and paw prints in stone offer sweeping views across the province." },
+      { "name": "Four Islands Tour", "place_type": "nature", "description": "A longtail boat day trip visiting Koh Muk's Emerald Cave (swum through in darkness to a hidden beach), Ko Chueak, Ko Ngai, and Ko Kradan for snorkelling and white sand." },
+      { "name": "Ao Nang Beach & Rock Climbing", "place_type": "beach", "description": "Krabi's main resort beach is the departure point for island-hopping boats; the surrounding karst cliffs of Tonsai and Railay host over 700 sport-climbing routes, making it one of Asia's premier climbing destinations." },
+      { "name": "Krabi Town Night Market", "place_type": "market", "description": "A Friday and Saturday night market on the Krabi River esplanade with fresh seafood grills, pad thai stalls, fruit smoothies, and local handicrafts — the authentic alternative to resort-strip dining." }
+    ]
+  },
+  {
+    "city_slug": "london-united-kingdom",
+    "places": [
+      { "name": "British Museum", "place_type": "museum", "description": "The world's oldest public museum, with over 8 million objects spanning two million years of human history — the Rosetta Stone, Elgin Marbles, and Sutton Hoo Helmet among the highlights." },
+      { "name": "Tower of London & Tower Bridge", "place_type": "landmark", "description": "A 1,000-year-old royal fortress on the Thames, housing the Crown Jewels and patrolled by Beefeaters; the adjacent 1894 Victorian Gothic bascule bridge is London's most recognisable." },
+      { "name": "Tate Modern", "place_type": "museum", "description": "The world's most-visited modern art museum, housed in a converted Bankside power station, with the turbine hall as a dramatic venue for large-scale commissions and free permanent galleries." },
+      { "name": "Brixton Market & Electric Avenue", "place_type": "neighborhood", "description": "The heart of Black British London since the Windrush generation arrived in the 1950s, with covered markets selling Caribbean produce, record shops, afrobeat venues, and the Black Cultural Archives." },
+      { "name": "Notting Hill & Portobello Road Market", "place_type": "market", "description": "Portobello Road's Saturday antiques market draws thousands through a neighborhood that hosts the Notting Hill Carnival every August — Europe's largest street festival and the UK's greatest celebration of Caribbean culture." }
+    ]
+  },
+  {
+    "city_slug": "edinburgh-united-kingdom",
+    "places": [
+      { "name": "Edinburgh Castle", "place_type": "landmark", "description": "A volcanic crag fortress dominating the city skyline, housing the Scottish Crown Jewels, the Stone of Destiny, and the National War Museum — the most visited paid attraction in Scotland." },
+      { "name": "Royal Mile", "place_type": "neighborhood", "description": "The spine of the Old Town running from the Castle down to Holyrood Palace, lined with medieval closes, whisky shops, tartan sellers, and the High Kirk of St Giles." },
+      { "name": "Arthur's Seat", "place_type": "nature", "description": "An ancient volcanic summit rising 251 metres in the middle of the city, a 45-minute climb from Holyrood with 360-degree views across Edinburgh, the Firth of Forth, and on clear days to the Highlands." },
+      { "name": "Holyrood Palace", "place_type": "landmark", "description": "The official Scottish residence of the British monarch, at the foot of the Royal Mile beside the Salisbury Crags, with state apartments, the ruins of a 12th-century abbey, and exhibitions on Mary Queen of Scots." },
+      { "name": "National Museum of Scotland", "place_type": "museum", "description": "A free museum in the Old Town tracing Scottish history from geological origins to the modern day, with highlights including Dolly the cloned sheep, Lewis Chessmen, and an Pictish collection." }
+    ]
+  },
+  {
+    "city_slug": "manchester-united-kingdom",
+    "places": [
+      { "name": "Museum of Science and Industry", "place_type": "museum", "description": "Housed on the site of the world's first inter-city railway station, this free museum covers the Industrial Revolution, Manchester's textile heritage, and the first stored-program computer (Baby), built here in 1948." },
+      { "name": "Manchester Art Gallery", "place_type": "museum", "description": "A free civic gallery in a neoclassical building with an outstanding collection of Pre-Raphaelite paintings alongside contemporary acquisitions — one of England's finest regional collections." },
+      { "name": "Northern Quarter", "place_type": "neighborhood", "description": "Manchester's creative hub, with independent record shops, vintage clothing, coffee roasters, and the street art that made Thomas Street and Stevenson Square a creative landmark since the Madchester era." },
+      { "name": "The Whitworth", "place_type": "museum", "description": "A free art gallery in Whitworth Park with one of Britain's best textile collections alongside works by Turner, Picasso, and Hockney, in a prize-winning 2015 extension that brings the park inside the building." },
+      { "name": "Castlefield Roman Fort", "place_type": "ancient ruins", "description": "The reconstructed gatehouse and ramparts of Mamucium — the Roman fort established in 79 CE around which Manchester grew — set in a heritage area at the confluence of the Irwell and Medlock rivers." }
+    ]
+  },
+  {
+    "city_slug": "liverpool-united-kingdom",
+    "places": [
+      { "name": "The Beatles Story & Mathew Street", "place_type": "museum", "description": "The world's largest permanent exhibition dedicated to The Beatles, at Albert Dock, traces the band's story from the Cavern Club to Abbey Road; Mathew Street is home to the rebuilt Cavern Club where they first played." },
+      { "name": "Albert Dock & Tate Liverpool", "place_type": "landmark", "description": "The world's first enclosed non-combustible warehouse complex, now a UNESCO World Heritage waterfront with galleries, restaurants, and Tate Liverpool — the largest modern art gallery outside London." },
+      { "name": "International Slavery Museum", "place_type": "museum", "description": "The world's leading museum on transatlantic slavery and its legacies, at Albert Dock, documenting Liverpool's central role in the trade and giving voice to the African experience with particular depth and honesty." },
+      { "name": "Liverpool Cathedral", "place_type": "religious site", "description": "The largest cathedral in Britain and the fifth-largest in the world, completed in 1978 after 74 years of construction, with the highest and heaviest peal of church bells in the world." },
+      { "name": "Walker Art Gallery", "place_type": "museum", "description": "One of the finest art galleries outside London, with a collection spanning 500 years from the Renaissance to the 21st century, including exceptional Pre-Raphaelite works and a celebrated sculpture gallery." }
+    ]
+  },
+  {
+    "city_slug": "accra-ghana",
+    "places": [
+      { "name": "Kwame Nkrumah Memorial Park & Mausoleum", "place_type": "landmark", "description": "The mausoleum and museum honouring Ghana's founding president and pan-African visionary Kwame Nkrumah, set in a garden at the site where he declared independence on 6 March 1957." },
+      { "name": "Cape Coast Castle", "place_type": "landmark", "description": "A 17th-century UNESCO World Heritage slave fort on the coast 150 km from Accra, with the Door of No Return through which enslaved Africans were shipped to the Americas — a profound and essential visit." },
+      { "name": "National Museum of Ghana", "place_type": "museum", "description": "The country's principal museum, with ethnographic collections, royal regalia, traditional crafts, and permanent exhibitions on Ghanaian history from prehistory through independence." },
+      { "name": "Makola Market", "place_type": "market", "description": "Accra's largest and most dynamic open-air market, a teeming multilevel labyrinth of textiles, electronics, foodstuffs, and everyday goods — the commercial heartbeat of the city." },
+      { "name": "Labadi Beach", "place_type": "beach", "description": "Accra's most popular public beach, with warm Atlantic water, weekend drumming and dance performances, beach football, and hawkers selling grilled corn and fresh coconuts." }
+    ]
+  },
+  {
+    "city_slug": "cape-town-south-africa",
+    "places": [
+      { "name": "Table Mountain", "place_type": "nature", "description": "A flat-topped sandstone massif rising 1,086 metres directly above the city, accessible by rotating aerial cableway, with views across the Cape Peninsula, both oceans, and Robben Island." },
+      { "name": "Robben Island", "place_type": "landmark", "description": "The UNESCO World Heritage island where Nelson Mandela was imprisoned for 18 of his 27 years; tours are led by former political prisoners and include Mandela's cell and the lime quarry where he worked." },
+      { "name": "V&A Waterfront", "place_type": "landmark", "description": "A working harbour redeveloped into Cape Town's most popular destination, with over 450 shops, the Zeitz MOCAA museum of African contemporary art, and the departure point for Robben Island ferries." },
+      { "name": "Bo-Kaap", "place_type": "neighborhood", "description": "A hillside neighbourhood of brightly painted houses above the city centre, home to Cape Town's Cape Malay Muslim community since the 18th century, with mosques, a museum, and spice-scented cooking traditions." },
+      { "name": "Kirstenbosch National Botanical Garden", "place_type": "park", "description": "A world-renowned botanical garden on the eastern slopes of Table Mountain, showcasing South Africa's extraordinary fynbos flora, with the Boomslang canopy walkway and summer Sunday sunset concerts." }
+    ]
+  },
+  {
+    "city_slug": "salvador-brazil",
+    "places": [
+      { "name": "Pelourinho Historic Centre", "place_type": "neighborhood", "description": "A UNESCO World Heritage hilltop district of cobbled streets and colonial Baroque architecture painted in vivid colours — the cultural capital of Afro-Brazilian life, with drumming troupes, Candomblé temples, and capoeira circles." },
+      { "name": "Church of Senhor do Bonfim", "place_type": "religious site", "description": "The most important religious site in Bahia, a 1745 church that blends Catholic and Candomblé devotion; the Washing of the Steps festival in January draws hundreds of thousands of worshippers." },
+      { "name": "Mercado Modelo", "place_type": "market", "description": "A 19th-century neoclassical customs house converted into Salvador's principal artisanal market, with over 200 stalls selling Bahian crafts, percussion instruments, acarajé, and capoeira cordas (belts)." },
+      { "name": "Capoeira Angola Show", "place_type": "cultural", "description": "Capoeira was born in Bahia among enslaved Africans; watching or joining a roda (circle) at the Forte de Santo Antônio or with the Grupo de Capoeira Angola Pelourinho connects visitors to one of Brazil's most profound African inheritances." },
+      { "name": "Porto da Barra Beach", "place_type": "beach", "description": "Salvador's most beloved urban beach, in the Barra neighbourhood where the Bay of All Saints meets the Atlantic, with calm clear water, a historic lighthouse, and the busiest sunset crowds in the city." }
+    ]
+  },
+  {
+    "city_slug": "lisbon-portugal",
+    "places": [
+      { "name": "Belém Tower & Jerónimos Monastery", "place_type": "landmark", "description": "Two UNESCO World Heritage Manueline masterpieces on the Tagus waterfront — the 1516 watchtower guarded the mouth of the river; the 1502 monastery was built to celebrate Vasco da Gama's sea route to India." },
+      { "name": "Alfama & São Jorge Castle", "place_type": "neighborhood", "description": "Lisbon's oldest neighbourhood of whitewashed houses and fado houses climbs the hill below the 11th-century Moorish castle, with the Museu do Fado preserving the history of Portugal's most soulful musical tradition." },
+      { "name": "LX Factory", "place_type": "cultural", "description": "A 19th-century industrial complex on the riverfront beneath the 25 de Abril bridge, transformed into a creative village of independent shops, restaurants, a Sunday market, and live music events." },
+      { "name": "Museu Nacional do Azulejo", "place_type": "museum", "description": "Housed in a 16th-century convent, this museum traces the history of Portugal's signature decorative tin-glazed ceramic tiles from their Moorish origins to contemporary art — including a 23-metre panorama of pre-earthquake Lisbon." },
+      { "name": "Miradouro da Graça", "place_type": "viewpoint", "description": "The finest of Lisbon's seven hills viewpoints, with benches under pine trees looking south over the Alfama's terracotta rooftops, the castle, and the Tagus — best at sunset with a Sagres beer." }
+    ]
+  },
+  {
+    "city_slug": "dakar-senegal",
+    "places": [
+      { "name": "Gorée Island", "place_type": "landmark", "description": "A UNESCO World Heritage island 3 km off Dakar, a major embarkation point for enslaved Africans during the transatlantic trade, with the House of Slaves and its Door of No Return a site of global historical significance." },
+      { "name": "African Renaissance Monument", "place_type": "landmark", "description": "A 49-metre bronze statue — taller than the Statue of Liberty — on a basalt hilltop in Ouakam, depicting a man, woman, and child emerging from a volcano; the largest statue in Africa, completed in 2010." },
+      { "name": "IFAN Museum of African Arts", "place_type": "museum", "description": "The Institut Fondamental d'Afrique Noire museum on Place de Soweto, with one of West Africa's finest collections of masks, statuary, jewellery, and textiles from across the continent." },
+      { "name": "Grand Mosque of Dakar", "place_type": "religious site", "description": "A 1964 Moroccan-gifted mosque with a 67-metre minaret visible across central Dakar, one of West Africa's most important Friday mosques, with space for 7,000 worshippers in its marble interior." },
+      { "name": "Soumbédioune Artisan Village & Fish Market", "place_type": "market", "description": "A beachside artisan cooperative selling Wolof weaving, leather goods, bronze sculptures, and Senegalese jewellery; the adjacent fish market at the Village des Pêcheurs is where the Atlantic catch is auctioned at dawn." }
+    ]
+  },
+  {
+    "city_slug": "marrakech-morocco",
+    "places": [
+      { "name": "Djemaa el-Fna", "place_type": "landmark", "description": "A UNESCO Intangible Cultural Heritage square — the living heart of Marrakech — transforming from a morning orange juice market to an evening spectacle of storytellers, acrobats, snake charmers, and food stalls." },
+      { "name": "Majorelle Garden", "place_type": "park", "description": "A 1924 botanical garden designed by French painter Jacques Majorelle and later restored by Yves Saint Laurent, with electric-blue paintwork, cacti, bamboo groves, and the Berber Museum within the grounds." },
+      { "name": "Bahia Palace", "place_type": "landmark", "description": "A late 19th-century palace of 8 hectares built for the Grand Vizier of the Sultan, with elaborately painted ceilings, carved stucco, zellij tile courtyards, and shaded orange tree gardens." },
+      { "name": "Medina Souks", "place_type": "market", "description": "A labyrinth of covered market streets inside the medieval medina walls, organized by craft — spice souk, leather souk (tanneries), lantern souk, carpet souk — each a sensory immersion in traditional Moroccan craftsmanship." },
+      { "name": "Saadian Tombs", "place_type": "landmark", "description": "A 16th-century royal necropolis sealed by the Alaouite sultan in 1603 and rediscovered in 1917, with two decorated mausoleums containing the tombs of 66 members of the Saadian dynasty." }
+    ]
+  },
+  {
+    "city_slug": "kingston-jamaica",
+    "places": [
+      { "name": "Bob Marley Museum", "place_type": "museum", "description": "The former home and recording studio of Bob Marley at 56 Hope Road, now a museum preserving his personal effects, gold and platinum records, stage costumes, and the bullet holes from the 1976 assassination attempt." },
+      { "name": "Devon House", "place_type": "landmark", "description": "A grand 1881 mansion built by Jamaica's first Black millionaire George Stiebel, with beautifully restored Victorian interiors, heritage shops, and I-Scream — Kingston's most famous ice cream parlour." },
+      { "name": "National Gallery of Jamaica", "place_type": "museum", "description": "The Caribbean's finest art museum, in downtown Kingston, tracing the full arc of Jamaican art from the colonial period through the independence generation including Edna Manley, Carl Abrahams, and contemporary artists." },
+      { "name": "Port Royal & Fort Charles", "place_type": "landmark", "description": "The former buccaneer capital of the Caribbean, partly submerged by the 1692 earthquake, with Fort Charles still standing and the Maritime Museum documenting the port's extraordinary history of piracy, trade, and catastrophe." },
+      { "name": "Hope Botanical Gardens", "place_type": "park", "description": "Jamaica's largest botanical garden, established in 1874 on the Hope sugar estate in the foothills of the Blue Mountains, with orchid houses, a cactus garden, and a zoo — Kingston's most expansive green escape." }
+    ]
+  },
+  {
+    "city_slug": "montreal-canada",
+    "places": [
+      { "name": "Old Montreal (Vieux-Montréal)", "place_type": "neighborhood", "description": "A 375-year-old neighbourhood on the St Lawrence waterfront, with cobblestone streets, the Basilique Notre-Dame (Canada's most dazzling interior), Place Jacques-Cartier, and the city's best outdoor terraces." },
+      { "name": "Mount Royal Park", "place_type": "park", "description": "Frederick Law Olmsted's 1876 park atop the 233-metre hill at the city's centre, with the Belvédère Kondiaronk lookout giving the definitive view of downtown Montreal and the St Lawrence." },
+      { "name": "Montreal Museum of Fine Arts", "place_type": "museum", "description": "Canada's most visited museum, with a collection of 44,000 works spanning 8,000 years across six interconnected pavilions — including the Michel de la Chenelière International Atelier for Education." },
+      { "name": "Jean-Talon Market", "place_type": "market", "description": "The largest open-air market in North America, in Little Italy, overflowing with Quebec produce, maple syrup, ice ciders, and artisan cheese from spring through autumn — the beating heart of Montreal's food culture." },
+      { "name": "Little Burgundy & Jazz Scene", "place_type": "neighborhood", "description": "The historic home of Montreal's Black community, shaped by Haitian and Caribbean immigration, with Maison de jazz and the Upstairs Jazz Bar anchoring a neighbourhood that has produced Oscar Peterson and other jazz giants." }
+    ]
+  },
+  {
+    "city_slug": "bahia-brazil",
+    "places": [
+      { "name": "Pelourinho Historic Centre", "place_type": "neighborhood", "description": "The UNESCO World Heritage upper city of Salvador da Bahia — a riot of colonial colour, cobblestone streets, Baroque churches, and the most concentrated expression of Afro-Brazilian culture in the Americas." },
+      { "name": "Bonfim Church", "place_type": "religious site", "description": "The most beloved church in Bahia, on the Bonfim peninsula, where the syncretic fusion of Catholic and Candomblé devotion is at its most vivid — coloured ribbons tied to the iron grille represent wishes made." },
+      { "name": "Carnaval Street Circuit", "place_type": "cultural", "description": "Salvador's carnival is Africa in Brazil — the world's largest street carnival, with the Afro bloco Olodum and Ilê Aiyê leading three separate circuits of up to three million revellers through the city for six days." },
+      { "name": "Farol da Barra", "place_type": "landmark", "description": "The oldest lighthouse in the Americas, built in 1698 at the tip of the Barra peninsula where the Bay of All Saints meets the Atlantic, surrounded by a popular sunset gathering and the Nautical Museum inside." },
+      { "name": "Mercado São Miguel", "place_type": "market", "description": "A 19th-century market building in the lower city selling acarajé, dendê oil, Bahian spices, and handcrafted percussion instruments — the most concentrated taste of Bahia's West African culinary inheritance." }
+    ]
+  },
+  {
+    "city_slug": "cartagena-colombia",
+    "places": [
+      { "name": "Walled City (Ciudad Amurallada)", "place_type": "landmark", "description": "A UNESCO World Heritage colonial city enclosed by 11 km of 16th-century walls, with Baroque churches, flower-draped balconies, and plazas shaded by almond trees — one of the best-preserved colonial cities in the Americas." },
+      { "name": "Getsemaní", "place_type": "neighborhood", "description": "Cartagena's most authentic neighbourhood, just outside the walls, with street murals, Afro-Caribbean music, rooftop bars, and a social energy that reflects the real Cartagena — led and lived by its majority Afro-Colombian community." },
+      { "name": "Castillo San Felipe de Barajas", "place_type": "landmark", "description": "The largest Spanish colonial fortress in the Americas, built from 1536 on the San Lázaro hill, with a labyrinth of tunnels, secret passages, and panoramic views over the bay and the city walls." },
+      { "name": "Islas del Rosario", "place_type": "beach", "description": "A national park of 27 coral islands 35 km offshore, with some of Colombia's clearest Caribbean water and healthiest coral reefs — day trips by fast boat include snorkelling and stops at a private beach club." },
+      { "name": "Palenque de San Basilio", "place_type": "cultural", "description": "A UNESCO Masterpiece of Oral Heritage — the first free Black town in the Americas, founded by escaped slaves led by Benkos Biohó in 1599, located 70 km from Cartagena, where Palenquero Creole is still spoken." }
+    ]
+  },
+  {
+    "city_slug": "dubai-united-arab-emirates",
+    "places": [
+      { "name": "Burj Khalifa & Dubai Fountain", "place_type": "landmark", "description": "The world's tallest building at 829 metres, with observation decks on floors 124 and 148; at its base the Dubai Fountain performs nightly choreographed water shows set to Arabic and international music." },
+      { "name": "Dubai Mall", "place_type": "landmark", "description": "The world's most-visited shopping and entertainment destination, with over 1,200 shops, an Olympic-size ice rink, a 10 million litre aquarium, a dinosaur skeleton, and the Dubai Fountain promenade." },
+      { "name": "Gold Souk & Spice Souk (Deira)", "place_type": "market", "description": "Two of Dubai's oldest traditional markets — the Gold Souk's 380 retailers display 10 tonnes of gold jewellery, while the Spice Souk overflows with saffron, frankincense, rose water, and dried limes." },
+      { "name": "Al Fahidi Historic District & Dubai Creek", "place_type": "neighborhood", "description": "The 19th-century windtower district is Dubai's oldest surviving neighbourhood, with museums, art galleries, and the Dubai Museum; a traditional abra (wooden boat) ferry crosses the Creek to the souks." },
+      { "name": "Palm Jumeirah & Atlantis", "place_type": "landmark", "description": "The world's largest artificial island, visible from space, with the Atlantis resort at its crown featuring Aquaventure water park, a private beach, and underwater suites in the Ambassador Lagoon." }
+    ]
+  },
+  {
+    "city_slug": "singapore-singapore",
+    "places": [
+      { "name": "Gardens by the Bay", "place_type": "park", "description": "A 101-hectare nature park with the iconic Supertree Grove — 18 tree-like vertical gardens up to 50 metres tall — alongside the Cloud Forest and Flower Dome conservatories; free light shows nightly." },
+      { "name": "Marina Bay Sands SkyPark", "place_type": "landmark", "description": "The rooftop infinity pool and observation deck spanning three 55-storey towers, with the most dramatic skyline views in Southeast Asia — open to hotel guests and observation deck ticket holders." },
+      { "name": "Chinatown & Little India", "place_type": "neighborhood", "description": "Two of Singapore's most atmospheric heritage districts — Chinatown's temples, clan houses, and hawker centres contrast with Little India's flower garlands, sari shops, and Sri Veeramakaliamman Temple." },
+      { "name": "Sentosa Island", "place_type": "beach", "description": "A 500-hectare resort island connected to the mainland by cable car, monorail, and boardwalk, with Universal Studios Singapore, S.E.A. Aquarium, and Palawan Beach — the southernmost point of continental Asia." },
+      { "name": "Hawker Centres", "place_type": "cultural", "description": "Singapore's open-air food courts are a UNESCO Intangible Cultural Heritage — Lau Pa Sat's satay alley and Maxwell Food Centre's Tian Tian chicken rice are essential stops in one of the world's great street food cultures." }
+    ]
+  },
+  {
+    "city_slug": "amsterdam-netherlands",
+    "places": [
+      { "name": "Rijksmuseum", "place_type": "museum", "description": "The Netherlands' national museum, with the world's greatest collection of Dutch Golden Age painting — Rembrandt's Night Watch and Vermeer's The Milkmaid among 8,000 objects in a grand 19th-century building." },
+      { "name": "Anne Frank House", "place_type": "museum", "description": "The preserved canal house where Anne Frank and her family hid for two years before their arrest in 1944; the original Secret Annexe, Anne's handwritten diary, and photographs make this one of the world's most moving museums." },
+      { "name": "Van Gogh Museum", "place_type": "museum", "description": "The world's largest collection of Van Gogh's works, with over 200 paintings and 500 drawings tracing his entire career from the dark Dutch period through the Sunflowers to the swirling canvases of Saint-Rémy." },
+      { "name": "Jordaan & Canal Cruise", "place_type": "neighborhood", "description": "A 17th-century working-class neighbourhood of narrow canals, independent galleries, and the Noordermarkt — best explored by rented canal boat or electric boat tour through Amsterdam's UNESCO canal ring." },
+      { "name": "Bijlmer", "place_type": "neighborhood", "description": "Amsterdam's Afro-Dutch hub in the southeast, with a large Surinamese and Ghanaian community, vibrant African and Caribbean markets, Kwakoe summer festival, and the Ajax ArenA — the city's most culturally diverse neighbourhood." }
+    ]
+  }
+]
