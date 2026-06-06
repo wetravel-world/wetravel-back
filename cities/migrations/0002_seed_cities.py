@@ -181,20 +181,22 @@ CITIES = [
         "meta_description": "Is New Orleans welcoming for Black travelers? Read reviews, get the welcome score, find places to visit.",
     },
     {
-        "name": "Atlanta",
+        "name": "San Francisco",
         "country": "United States",
-        "slug": "atlanta-united-states",
+        "slug": "san-francisco-united-states",
         "description": (
-            "Atlanta is widely known as the Black Mecca of the South — home to HBCUs, "
-            "Black-owned businesses, influential civil rights history, and one of the highest "
-            "concentrations of Black wealth and culture in the US. The city is a natural hub "
-            "for African American travelers and diaspora visitors alike, offering exceptional "
-            "representation, hospitality, and community."
+            "San Francisco is one of the United States' most progressive cities, long shaped "
+            "by civil rights activism and Black community leadership in the Fillmore District, "
+            "historically known as the 'Harlem of the West.' Tech-era gentrification has "
+            "dramatically displaced the city's Black population — from over 13% in the 1970s "
+            "to around 5% today — hollowing out the very neighborhoods that gave the city its "
+            "reputation. Black travelers find a welcoming, politically aware environment, "
+            "though the steep cost of living and loss of historic Black spaces are real and visible."
         ),
-        "welcome_score": 9.0,
-        "latitude": 33.749000,
-        "longitude": -84.388000,
-        "meta_description": "Is Atlanta welcoming for Black travelers? Read reviews, get the welcome score, find places to visit.",
+        "welcome_score": 7.5,
+        "latitude": 37.774900,
+        "longitude": -122.419400,
+        "meta_description": "Is San Francisco welcoming for Black travelers? Read reviews, get the welcome score, find places to visit.",
     },
     # --- China ---
     {
