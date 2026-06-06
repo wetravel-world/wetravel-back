@@ -23,4 +23,3 @@ print(f'[predeploy] Parsed → host={parsed.get("HOST")} port={parsed.get("PORT"
 EOF
 
 python manage.py migrate --noinput
-python manage.py collectstatic --noinput
