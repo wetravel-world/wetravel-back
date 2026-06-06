@@ -5,6 +5,7 @@ from rest_framework.exceptions import PermissionDenied
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from django.db.models import Avg
 from .models import City, Comment, CommentReply
 from .serializers import (
     CityDetailSerializer,
@@ -12,7 +13,15 @@ from .serializers import (
     CommentReplySerializer,
     CommentSerializer,
 )
-from .tasks import recalculate_city_score
+
+
+def _recalculate_city_score(city_pk):
+    approved = Comment.objects.filter(city_id=city_pk, is_approved=True)
+    result = approved.aggregate(avg=Avg('score'))
+    City.objects.filter(pk=city_pk).update(
+        welcome_score=result['avg'] or 0.0,
+        score_count=approved.count(),
+    )
 
 
 class CityListView(generics.ListAPIView):
@@ -85,14 +94,14 @@ class CommentViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         city = generics.get_object_or_404(City, slug=self.kwargs['slug'])
         serializer.save(author=self.request.user, city=city)
-        recalculate_city_score.delay(city.pk)
+        _recalculate_city_score(city.pk)
 
     def perform_destroy(self, instance):
         if instance.author != self.request.user:
             raise PermissionDenied('You can only delete your own comments.')
         city_pk = instance.city_id
         instance.delete()
-        recalculate_city_score.delay(city_pk)
+        _recalculate_city_score(city_pk)
 
 
 class CommentReplyViewSet(viewsets.ModelViewSet):
