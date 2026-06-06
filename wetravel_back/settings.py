@@ -166,6 +166,21 @@ CORS_ALLOWED_ORIGINS += [
 ]
 CORS_ALLOW_CREDENTIALS = True
 
+# CSRF — Django 4+ requires explicit trusted origins when behind a proxy
+CSRF_TRUSTED_ORIGINS = [
+    'https://we-travel.world',
+    'https://www.we-travel.world',
+    'https://wetravel-back-production.up.railway.app',
+]
+if os.environ.get('RAILWAY_PUBLIC_DOMAIN'):
+    CSRF_TRUSTED_ORIGINS.append(f"https://{os.environ['RAILWAY_PUBLIC_DOMAIN']}")
+
+# Trust Railway's TLS-terminating proxy so Django sees requests as HTTPS
+if not DEBUG:
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+
 # django-allauth
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
