@@ -91,6 +91,7 @@ class CommentViewSet(viewsets.ModelViewSet):
             rows = (
                 Comment.objects
                 .filter(author_id__in=author_ids, is_approved=True)
+                .order_by()
                 .values('author_id', slug=F('city__slug'))
                 .distinct()
             )

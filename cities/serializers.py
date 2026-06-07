@@ -35,6 +35,7 @@ class CommentSerializer(serializers.ModelSerializer):
             return cache.get(obj.author_id, [])
         return list(
             Comment.objects.filter(author_id=obj.author_id, is_approved=True)
+            .order_by()
             .values_list('city__slug', flat=True)
             .distinct()
         )
