@@ -225,6 +225,7 @@ FRONTEND_URL = config('FRONTEND_URL', default='')
 GOOGLE_CLIENT_ID = config('GOOGLE_CLIENT_ID', default='')
 UNSPLASH_ACCESS_KEY = config('UNSPLASH_ACCESS_KEY', default='')
 GOOGLE_PLACES_API_KEY = config('GOOGLE_PLACES_API_KEY', default='')
+GOOGLE_TRANSLATE_API_KEY = config('GOOGLE_TRANSLATE_API_KEY', default='')
 BOOKING_AFFILIATE_ID = config('BOOKING_AFFILIATE_ID', default='')
 
 # S3 / R2 storage (only active when bucket is configured)

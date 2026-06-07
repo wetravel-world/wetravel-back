@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import CityListView, CityDetailView, CountryDetailView, CommentViewSet, CommentReplyViewSet, BookingSearchView
+from .views import CityListView, CityDetailView, CountryDetailView, CommentViewSet, CommentReplyViewSet, BookingSearchView, TranslateView
 
 comment = CommentViewSet.as_view
 reply = CommentReplyViewSet.as_view
@@ -23,4 +23,6 @@ urlpatterns = [
          reply({'delete': 'destroy'}),                          name='comment-reply-destroy'),
 
     path('booking/search/',          BookingSearchView.as_view(), name='booking-search'),
+
+    path('translate/',               TranslateView.as_view(),     name='translate'),
 ]

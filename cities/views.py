@@ -1,3 +1,4 @@
+import requests
 from django.conf import settings
 from django.db.models import Avg, Count, F, Q, Sum
 from django.utils.text import slugify
@@ -85,6 +86,22 @@ class CountryDetailView(APIView):
         average_score = cities.aggregate(avg=Avg('welcome_score'))['avg']
         image = CountryImage.objects.filter(country=country).first()
 
+        # The overview description is a fixed template (not free-form content),
+        # so it's localized directly here — no translation tooling needed.
+        descriptions = {
+            'en': (
+                f"Discover how welcoming cities across {country} are for Black travelers, "
+                f"African diaspora visitors, and mixed-race couples — based on community "
+                f"reviews and welcome scores from real travelers."
+            ),
+            'fr': (
+                f"Découvrez à quel point les villes de {country} sont accueillantes pour les "
+                f"voyageurs noirs, les membres de la diaspora africaine et les couples mixtes — "
+                f"sur la base d'avis et de scores d'accueil donnés par de vrais voyageurs."
+            ),
+        }
+        lang = request.query_params.get('lang') or ''
+
         return Response({
             'country': country,
             'slug': slug,
@@ -93,12 +110,8 @@ class CountryDetailView(APIView):
             'hero_image_url': image.image_url if image else '',
             'hero_image_attribution_name': image.attribution_name if image else '',
             'hero_image_attribution_url': image.attribution_url if image else '',
-            'description': (
-                f"Discover how welcoming cities across {country} are for Black travelers, "
-                f"African diaspora visitors, and mixed-race couples — based on community "
-                f"reviews and welcome scores from real travelers."
-            ),
-            'cities': CityListSerializer(cities, many=True).data,
+            'description': descriptions.get(lang, descriptions['en']),
+            'cities': CityListSerializer(cities, many=True, context={'request': request}).data,
         })
 
 
@@ -212,3 +225,40 @@ class BookingSearchView(APIView):
             f'&utm_campaign={city_slug}'
         )
         return Response({'booking_url': url, 'city': city_name})
+
+
+class TranslateView(APIView):
+    """Proxies on-demand text translation through Google Translate so the API key
+    never reaches the frontend (mirrors the affiliate_id server-side pattern)."""
+    permission_classes = [permissions.AllowAny]
+
+    def post(self, request):
+        text = (request.data.get('text') or '').strip()
+        target = (request.data.get('target') or '').strip()
+
+        if not text or not target:
+            return Response({'detail': 'text and target are required'}, status=400)
+        if len(text) > 5000:
+            return Response({'detail': 'text is too long'}, status=400)
+
+        api_key = settings.GOOGLE_TRANSLATE_API_KEY
+        if not api_key:
+            return Response({'detail': 'Translation is not configured'}, status=503)
+
+        try:
+            resp = requests.post(
+                'https://translation.googleapis.com/language/translate/v2',
+                params={'key': api_key},
+                json={'q': text, 'target': target, 'format': 'text'},
+                timeout=8,
+            )
+            resp.raise_for_status()
+            translation = resp.json()['data']['translations'][0]
+        except (requests.RequestException, KeyError, IndexError, ValueError):
+            return Response({'detail': 'Translation failed'}, status=502)
+
+        return Response({
+            'translated_text': translation['translatedText'],
+            'detected_source_language': translation.get('detectedSourceLanguage', ''),
+            'target': target,
+        })

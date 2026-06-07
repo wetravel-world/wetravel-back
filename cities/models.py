@@ -19,6 +19,7 @@ class City(models.Model):
     continent = models.CharField(max_length=20, choices=CONTINENTS, default='Europe', db_index=True)
     slug = models.SlugField(unique=True)
     description = models.TextField()
+    description_fr = models.TextField(blank=True)
     welcome_score = models.DecimalField(max_digits=3, decimal_places=1, default=0.0)
     base_score    = models.DecimalField(max_digits=3, decimal_places=1, default=0.0,
                                         help_text='Editorial seed score (counts as 10 user votes)')
@@ -29,6 +30,7 @@ class City(models.Model):
     hero_image_attribution_name = models.CharField(max_length=200, blank=True)
     hero_image_attribution_url = models.URLField(blank=True)
     meta_description = models.TextField(blank=True)
+    meta_description_fr = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
