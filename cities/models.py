@@ -45,6 +45,22 @@ class City(models.Model):
         super().save(*args, **kwargs)
 
 
+class CountryImage(models.Model):
+    """
+    Hero image for a country's overview page (`/country/<slug>`).
+    There's no Country model — `country` is a plain field on City — so images
+    are keyed by the country name and fetched once via a management command.
+    """
+    country = models.CharField(max_length=100, unique=True)
+    image_url = models.URLField(blank=True, max_length=1000)
+    attribution_name = models.CharField(max_length=200, blank=True)
+    attribution_url = models.URLField(blank=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.country
+
+
 class Place(models.Model):
     city = models.ForeignKey(City, related_name='places', on_delete=models.CASCADE)
     name = models.CharField(max_length=200)

@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import CityListView, CityDetailView, CommentViewSet, CommentReplyViewSet, BookingSearchView
+from .views import CityListView, CityDetailView, CountryDetailView, CommentViewSet, CommentReplyViewSet, BookingSearchView
 
 comment = CommentViewSet.as_view
 reply = CommentReplyViewSet.as_view
@@ -7,6 +7,8 @@ reply = CommentReplyViewSet.as_view
 urlpatterns = [
     path('cities/',                  CityListView.as_view(),   name='city-list'),
     path('cities/<slug:slug>/',      CityDetailView.as_view(), name='city-detail'),
+
+    path('countries/<slug:slug>/',   CountryDetailView.as_view(), name='country-detail'),
 
     # Comments — list+create on collection, destroy on instance
     path('cities/<slug:slug>/comments/',

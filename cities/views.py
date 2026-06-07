@@ -1,12 +1,13 @@
 from django.conf import settings
-from django.db.models import Count, F, Q, Sum
+from django.db.models import Avg, Count, F, Q, Sum
+from django.utils.text import slugify
 from rest_framework import generics, permissions, viewsets
-from rest_framework.exceptions import PermissionDenied
+from rest_framework.exceptions import NotFound, PermissionDenied
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 
-from .models import City, Comment, CommentReply
+from .models import City, Comment, CommentReply, CountryImage
 from .serializers import (
     CityDetailSerializer,
     CityListSerializer,
@@ -59,6 +60,46 @@ class CityDetailView(generics.RetrieveAPIView):
         return City.objects.annotate(
             live_score_count=Count('comments', filter=Q(comments__is_approved=True))
         )
+
+
+class CountryDetailView(APIView):
+    """
+    GET /countries/<slug>/ → country overview: average welcome score across its
+    cities, a short description, and the list of cities (for a CityCard grid).
+
+    There's no Country model — `country` is a plain field on City — so the slug
+    is matched by slugifying each distinct country name.
+    """
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request, slug):
+        countries = City.objects.values_list('country', flat=True).distinct()
+        country = next((c for c in countries if slugify(c) == slug), None)
+        if country is None:
+            raise NotFound('Country not found.')
+
+        cities = City.objects.filter(country=country).annotate(
+            live_score_count=Count('comments', filter=Q(comments__is_approved=True))
+        ).order_by('-welcome_score', 'name')
+
+        average_score = cities.aggregate(avg=Avg('welcome_score'))['avg']
+        image = CountryImage.objects.filter(country=country).first()
+
+        return Response({
+            'country': country,
+            'slug': slug,
+            'average_score': round(average_score, 1) if average_score is not None else None,
+            'city_count': cities.count(),
+            'hero_image_url': image.image_url if image else '',
+            'hero_image_attribution_name': image.attribution_name if image else '',
+            'hero_image_attribution_url': image.attribution_url if image else '',
+            'description': (
+                f"Discover how welcoming cities across {country} are for Black travelers, "
+                f"African diaspora visitors, and mixed-race couples — based on community "
+                f"reviews and welcome scores from real travelers."
+            ),
+            'cities': CityListSerializer(cities, many=True).data,
+        })
 
 
 class CommentViewSet(viewsets.ModelViewSet):
