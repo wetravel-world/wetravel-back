@@ -112,8 +112,8 @@ COMMENTS = [
         "the next trip back!"
     ),
     (
-        "kwame.mensah", "dubai-united-arab-emirates", 6,
-        "Impressive skyline, impersonal vibe. Wouldn't rush back, honestly."
+        "kwame.mensah", "dubai-united-arab-emirates", 7,
+        "Impressive skyline, impersonal vibe. Incredible experience to leave  at least once."
     ),
     (
         "amara_d", "dakar-senegal", 9,
