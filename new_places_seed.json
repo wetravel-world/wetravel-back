@@ -1,0 +1,42 @@
+[
+  {
+    "city_slug": "tokyo-japan",
+    "places": [
+      { "name": "Senso-ji Temple", "place_type": "religious site", "description": "Tokyo's oldest and most visited temple, in the historic Asakusa district, reached through the iconic Kaminarimon Gate and a bustling shopping street of traditional snacks and souvenirs." },
+      { "name": "Shibuya Crossing & Center Gai", "place_type": "landmark", "description": "The world's busiest pedestrian intersection, surrounded by neon billboards, department stores, and the famous Hachiko statue — the defining image of modern Tokyo." },
+      { "name": "Meiji Shrine & Yoyogi Park", "place_type": "park", "description": "A serene Shinto shrine set within a forested park near Harajuku, offering a tranquil escape from the city and a glimpse of traditional Japanese ceremony and architecture." },
+      { "name": "Tsukiji Outer Market", "place_type": "market", "description": "A lively food market of narrow lanes lined with stalls selling fresh sushi, street snacks, and kitchenware — the best place in the city to sample Tokyo's seafood culture." },
+      { "name": "TeamLab Planets / Odaiba", "place_type": "museum", "description": "An immersive digital art museum of light and water installations, part of Tokyo's futuristic Odaiba waterfront district known for its shopping malls and bay views." }
+    ]
+  },
+  {
+    "city_slug": "osaka-japan",
+    "places": [
+      { "name": "Osaka Castle", "place_type": "landmark", "description": "A reconstructed 16th-century castle set in a large park famous for cherry blossoms, with a museum inside chronicling the life of its original builder, Toyotomi Hideyoshi." },
+      { "name": "Dotonbori", "place_type": "neighborhood", "description": "Osaka's iconic canal-side entertainment district, ablaze with neon signs and giant illuminated billboards, and the heart of the city's street food scene — takoyaki, okonomiyaki, and kushikatsu." },
+      { "name": "Kuromon Ichiba Market", "place_type": "market", "description": "A 190-stall covered market known as 'Osaka's Kitchen,' where visitors can sample fresh seafood, wagyu skewers, and seasonal produce straight from the vendors." },
+      { "name": "Umeda Sky Building", "place_type": "viewpoint", "description": "A striking twin-tower skyscraper connected by a 'floating garden' observatory on its roof, offering 360-degree views over Osaka's skyline, especially striking at sunset." },
+      { "name": "Shitennoji Temple", "place_type": "religious site", "description": "One of Japan's oldest Buddhist temples, founded in 593 AD, with a five-story pagoda, peaceful gardens, and a lively flea market held on the 21st and 22nd of each month." }
+    ]
+  },
+  {
+    "city_slug": "kyoto-japan",
+    "places": [
+      { "name": "Fushimi Inari Taisha", "place_type": "religious site", "description": "A famous Shinto shrine at the base of a mountain, known for its thousands of vermilion torii gates winding up wooded trails dotted with smaller shrines and fox statues." },
+      { "name": "Kinkaku-ji (Golden Pavilion)", "place_type": "landmark", "description": "A Zen Buddhist temple whose top two floors are completely covered in gold leaf, reflected dramatically in the still pond of its surrounding strolling garden." },
+      { "name": "Arashiyama Bamboo Grove", "place_type": "neighborhood", "description": "A towering bamboo forest path on Kyoto's western edge, near the Tenryu-ji temple gardens and the Togetsukyo Bridge over the Katsura River." },
+      { "name": "Gion District", "place_type": "neighborhood", "description": "Kyoto's famous geisha district, with preserved wooden machiya townhouses, traditional teahouses, and a chance — at dusk — to spot a geiko or maiko on her way to an appointment." },
+      { "name": "Kiyomizu-dera Temple", "place_type": "religious site", "description": "A UNESCO World Heritage temple built on a hillside without a single nail, famous for its wooden stage offering sweeping views over Kyoto and the surrounding maple and cherry trees." }
+    ]
+  },
+  {
+    "city_slug": "fukuoka-japan",
+    "places": [
+      { "name": "Fukuoka Castle Ruins & Maizuru Park", "place_type": "landmark", "description": "The stone foundations of a 17th-century castle set within a park famous for cherry blossoms, offering panoramic views over the city and Hakata Bay." },
+      { "name": "Dazaifu Tenmangu Shrine", "place_type": "religious site", "description": "A revered Shinto shrine dedicated to the god of learning, set among thousands of plum trees, and one of the most important pilgrimage sites in Kyushu." },
+      { "name": "Yatai Food Stalls (Nakasu & Tenjin)", "place_type": "neighborhood", "description": "Fukuoka's famous open-air street food stalls that line the riverbanks at night, serving the city's signature tonkotsu ramen, yakitori, and oden in a convivial, communal setting." },
+      { "name": "Ohori Park", "place_type": "park", "description": "A large central park built around a lake modeled on West Lake in Hangzhou, with a Japanese garden, walking paths, and the Fukuoka Art Museum on its grounds." },
+      { "name": "Canal City Hakata", "place_type": "landmark", "description": "A sprawling shopping and entertainment complex built around an artificial canal, with theaters, a cinema, fountains, and a wide range of dining and retail." }
+    ]
+  }
+]
