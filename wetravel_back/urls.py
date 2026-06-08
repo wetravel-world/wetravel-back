@@ -4,11 +4,12 @@ from django.http import HttpResponse
 from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
-from cities.sitemaps import CitySitemap, StaticPagesSitemap
+from cities.sitemaps import CitySitemap, CountrySitemap, StaticPagesSitemap
 
 sitemaps = {
     'static': StaticPagesSitemap,
     'cities': CitySitemap,
+    'countries': CountrySitemap,
 }
 
 
