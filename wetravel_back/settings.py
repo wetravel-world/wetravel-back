@@ -220,6 +220,14 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='wetraveladmin@gmail.com')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='WeTravel <wetraveladmin@gmail.com>')
 
+# In production, transactional emails are sent via the wetravel-mailer Netlify function
+# instead of SMTP directly (see accounts/utils.py)
+MAILER_FUNCTION_URL = config(
+    'MAILER_FUNCTION_URL',
+    default='https://effortless-fudge-3b9aab.netlify.app/.netlify/functions/send-email',
+)
+APP_SECRET_KEY = config('APP_SECRET_KEY', default='')
+
 FRONTEND_URL = config('FRONTEND_URL', default='')
 
 # External APIs
